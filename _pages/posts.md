@@ -8,11 +8,11 @@ permalink: /posts/
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {% for post in paginator.posts %}
+                {% for post in site.posts %}
                     {% include tile.html %}
                 {% endfor %}
 
-                {% include pagination.html %}
+                <!-- include pagination.html -->
             </div>
         </div>
     </div>
