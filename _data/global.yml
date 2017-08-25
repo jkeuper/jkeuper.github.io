@@ -1,7 +1,7 @@
 # Site Settings
 title: 'Keuper ICT'
-description: 'A software development, ethical hacking and security by Jasper Keuper'
-url: 'http://jkeuper.github.io' # the base hostname & protocol for your site
+description: 'Software development, ethical hacking and security.'
+url: 'https://jkeuper.github.io' # the base hostname & protocol for your site
 footer_text: '&copy; Keuper ICT 2015 - powered by Jekyll and Bootstrap'
 
 # Admin Settings

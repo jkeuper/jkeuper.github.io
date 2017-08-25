@@ -8,6 +8,8 @@ featured_image: '/images/posts/mediaplayer1.png'
 lead_text: 'To me Universal Plug and Play (UPnP) alway was a mysterious protocol. When some cool program required an open port, UPnP made it happen. When some fancy program did not work, someone would ask me: "Did you enable UPnP"? Right, I forgot... I had no clue what magic UPnP did for me.'
 ---
 
+**Note: this is a draft...**
+
 The problem UPnP solves, in this case, is simple. Almost every home network uses Network Address Translation (NAT), so your internal devices cannot be reached unless you map a port on the external IP interface, to a port of a computer on your internal network.
 
 Quote from wikipedia:
