@@ -20,7 +20,7 @@ Now that's pretty awesome! (For the security minded people: "Uh oh, Houston we h
 UPnP had its share of flaws. Unintended errors in UPnP software that were exploitable, but for now let's focus on the really awesome features of UPnP. Let's pick our initial case and see how we can use UPnP to make one or more internal unreachable ports, reachable for the world.
 
 
-```python
+{% highlight python %}
 import socket
 
 msg = \
@@ -41,10 +41,11 @@ try:
         print addr, data
 except socket.timeout:
     pass
-```
+{% endhighlight %}
+
 OR
 
-```python
+{% highlight python %}
 import miniupnpc
 
 upnp = miniupnpc.UPnP()
@@ -57,7 +58,7 @@ port = 4321O
 # addportmapping args:
 # (external-port, protocol, internal-host, internal-port, description, remote-host)
 upnp.addportmapping(port, 'TCP', upnp.lanaddr, port, 'testing', '')
-```
+{% endhighlight %}
 
 ---
 https://www.electricmonk.nl/log/2016/07/05/exploring-upnp-with-python/
