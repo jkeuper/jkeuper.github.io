@@ -13,7 +13,7 @@ To me Universal Plug and Play (UPnP) alway was a mysterious protocol. When some 
 The problem UPnP solves, in this case, is simple. Almost every home network uses Network Address Translation (NAT), so your internal devices cannot be reached unless you map a port on the external IP interface, to a port of a computer on your internal network.
 
 Quote from wikipedia:
->> Universal Plug and Play (UPnP) is a set of networking protocols that permits networked devices [...] s to seamlessly discover each other's presence on the network and establish functional network services for data sharing, communications, and entertainment.
+> Universal Plug and Play (UPnP) is a set of networking protocols that permits networked devices [...] s to seamlessly discover each other's presence on the network and establish functional network services for data sharing, communications, and entertainment.
 
 Now that's pretty awesome! (For the security minded people: "Uh oh, Houston we have a problem...") Ofcourse it's nice that you can find your printer _automatically_ and your media player shows your media storage device to pick your movies from.
 
