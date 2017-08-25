@@ -1,6 +1,6 @@
 ---
 layout: inner
-title: 'Exploring Universal Plug and Play (UPnP)'
+title: 'Explore Universal Plug and Play'
 date: 2017-08-25 02:37
 categories: security draft
 tags: upnp hack draft
