@@ -13,7 +13,7 @@ Recently in my OSCP course, I was struggeling a few hours to get a reversed shel
 <img src="/images/posts/netcat_freebsd.png" 
      alt="Netcat on FreeBSD"
      width="320px"
-     class="media pull-right image-thumbnail">
+     class="media pull-right img-thumbnail">
 I immediately found that netcat was installed, but ofcourse [without the e-option](https://www.google.nl/search?q=netcat+GAPING_SECURITY_HOLE). All references to netcat without -e suggest you use  After trying harder for many many many tries, I finally came up with the following solution.
 
 1. Use tail -f to feed commands from a temporary file to bash. (Using -n 0 to ignore any current content of the temporary file.)
