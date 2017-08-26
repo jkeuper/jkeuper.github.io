@@ -5,7 +5,7 @@ date: 2017-08-26 01:37
 categories: security draft
 tags: netcat hack draft
 featured_image: '/images/posts/netcat-a-swiss-army-tool-1-638.jpg'
-lead_text: 'Okay, okay, this is some kind of insiders thing. If you don't know what I'm talking about from the title of this article, then there is nothing to see... Please move along!'
+lead_text: 'Okay, okay, this is some kind of insiders thing. If you don\'t know what I\'m talking about from the title of this article, then there is nothing to see... Please move along!'
 ---
 
 Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, so not quite my expertise.
