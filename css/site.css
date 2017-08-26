@@ -7,6 +7,17 @@ body {
   color: #5a5a5a;
 }
 
+/* GLOBAL CHANGES
+-------------------------------------------------- */
+.pull-right {
+  margin-left: 10px;
+  margin-top: 5px !important;
+}
+
+.pull-left {
+  margin-right: 10px;
+  margin-top: 5px !important;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */

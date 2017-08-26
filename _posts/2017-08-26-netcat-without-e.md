@@ -8,13 +8,12 @@ featured_image: '/images/posts/netcat-a-swiss-army-tool-1-638.jpg'
 lead_text: 'Okay, okay, this is some kind of insiders thing. If you dont know what Im talking about from the title of this article, then there is nothing to see... Please move along!'
 ---
 
-Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, so not quite my expertise.
+Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, not quite my expertise.
 
 <img src="/images/posts/netcat_freebsd.png" 
      alt="Netcat on FreeBSD"
      width="320px"
-     class="pull-right">
-
+     class="media pull-right image-thumbnail">
 I immediately found that netcat was installed, but ofcourse [without the e-option](https://www.google.nl/search?q=netcat+GAPING_SECURITY_HOLE). All references to netcat without -e suggest you use  After trying harder for many many many tries, I finally came up with the following solution.
 
 1. Use tail -f to feed commands from a temporary file to bash. (Using -n 0 to ignore any current content of the temporary file.)
