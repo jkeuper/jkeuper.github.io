@@ -9,4 +9,6 @@ Since I was a kid, I alway was ripping things apart. Hopefully putting things ba
 
 Now I'm a software engineer. Started in C++, switched to C#, but in the meantime always learning and using other languages. I even used assembler, learned it on the go when some C++ routine really needed to blazing fast. 
 
+As a teamplayer I am a analytical and creative developer with a focus on high quality and secure code.
+
 You can check my profile on LinkedIn [here](https://nl.linkedin.com/in/jkeuper). 
