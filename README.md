@@ -29,3 +29,8 @@ Run test:
 ```
 make cibuild
 ```
+
+## Continuous integration
+
+Serra's CI build:
+[![Build Status](https://travis-ci.org/serra/jkeuper.github.io.svg?branch=master)](https://travis-ci.org/serra/jkeuper.github.io)
