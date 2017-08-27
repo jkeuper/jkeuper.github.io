@@ -7,14 +7,6 @@ data_dir: ./_data
 collections:
   category:
     output: true
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"
       
 # Handling Reading
 safe:         false
@@ -53,7 +45,13 @@ paginate_path: /page:num
 timezone:      null
 
 quiet:    false
-defaults: []
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 # Markdown Processors
 rdiscount:
