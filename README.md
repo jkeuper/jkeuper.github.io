@@ -8,7 +8,7 @@ http://scotch-io.github.io/
 
 ## Development
 
-Requires Ruby 2.3 and Make. Onky tested on Mac OS. 
+Requires Ruby 2.3 and Make. Only tested on Mac OS. 
 Windows is known to behave badly with jekyll, 
 although workarounds do exist.
 
