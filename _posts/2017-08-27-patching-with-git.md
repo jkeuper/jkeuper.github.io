@@ -32,6 +32,7 @@ $ git format-patch master --stdout > small_fixes.patch
 ```
 
 Or make a patch containing the last two commits:
+
 ```bash
 $ git format-patch -2 --stdout > small_fixes.patch
 ```
