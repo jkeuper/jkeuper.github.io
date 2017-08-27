@@ -1,0 +1,6 @@
+.sass-cache/
+_site/
+
+\.ruby-version
+
+Gemfile\.lock
