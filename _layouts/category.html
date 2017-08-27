@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="title-group">
+    <h1 class="special">
+        <span>
+            Filed Under <small>#{{ page.tag }}</small>            
+        </span>
+    </h1>
+</div>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% for post in site.categories[page.tag] %}
+                    {% include post-preview.html %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>

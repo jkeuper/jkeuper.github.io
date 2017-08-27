@@ -7,6 +7,17 @@ body {
   color: #5a5a5a;
 }
 
+/* GLOBAL CHANGES
+-------------------------------------------------- */
+.pull-right {
+  margin-left: 10px;
+  margin-top: 5px !important;
+}
+
+.pull-left {
+  margin-right: 10px;
+  margin-top: 5px !important;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -50,7 +61,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 320px;
-  background-color: #777;
+  background-color: #0000CC;
 }
 .carousel-inner > .item > img {
   position: absolute;
