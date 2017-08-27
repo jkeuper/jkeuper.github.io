@@ -13,11 +13,11 @@
     <div class="inner-guts">
         <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <aside>
-            {{ post.date | date: "%m.%d.%y" }}
+            {{ post.date | date: "%d.%m.%y" }}
             {% if post.categories != empty %}
                 &middot;
                 {% for category in post.categories %}
-                    <span>{{ category }}</span>
+                    <span><a href="/posts/{{ category }}/">{{ category }}</a></span>
                 {% endfor %}
             {% endif %}
         </aside>

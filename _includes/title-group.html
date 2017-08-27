@@ -22,11 +22,11 @@
     </h1>
     {% if page.id %}
     <aside>
-        {{ page.date | date: "%m.%d.%y" }}
+        {{ page.date | date: "%d.%m.%y" }}
         {% if page.categories != empty %}
             &middot;
             {% for category in page.categories %}
-                <span>{{ category }}</span>
+                <span><a href="/posts/{{ category }}/">{{ category }}</a></span>
             {% endfor %}
         {% endif %}
     </aside>
