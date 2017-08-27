@@ -4,8 +4,18 @@ destination: ./_site
 plugins_dir:     ./_plugins
 layouts_dir:     ./_layouts
 data_dir: ./_data
-# collections: null
+collections:
+  category:
+    output: true
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+      
 # Handling Reading
 safe:         false
 include:      [".htaccess"]
@@ -37,7 +47,7 @@ host:    127.0.0.1
 baseurl: "" # does not include hostname
 
 # Outputting
-permalink:     /:title.html
+permalink:     /posts/:categories/:year/:month/:day/:title
 paginate: 10
 paginate_path: /page:num
 timezone:      null
