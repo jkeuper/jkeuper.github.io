@@ -8,7 +8,7 @@ featured_image: '/images/posts/git.jpg'
 lead_text: 'How do you send commits to your coworkers or some other location without pushing them to a repository yet?'
 ---
 
-I am working on a windows laptop, so getting jekyll to work correctly seems to be troublesome. So before pushing changes to my repository, I would like to check them on a jekyll docker image running on my NAS. Using the `git format-patch` command, we export out commits and apply them on our jekyll docker image to build and html-proof our site.
+I am working on a windows laptop, so getting jekyll to work correctly seems to be troublesome. So before pushing changes to my repository, I would like to check them on a jekyll docker image running on my NAS. Using the "git format-patch" command, we export out commits and apply them on our jekyll docker image to build and html-proof our site.
 
 First of all start with a new branch:
 
@@ -17,17 +17,23 @@ $ git checkout -b test_build
 Switched to a new branch 'test+build'
 ```
 
-In the `test_build` branch, we've made some minor fixes and add a new article.
+In the "test_build" branch, we've made some minor fixes and add a new article.
 
 ```bash
 $ git log --pretty=oneline -2
 ea88d654638714c54ede324244ce17bc456365ef Fixed highlighting code
 9afa570100bd49b992e636f0d530fa4125d8c507 Fixed links in carousel
 ```
+
 Create a single patch file, instead of patches per commit:
 
 ```bash
-$ git format-patch master --stdout > fix_empty_poster.patch
+$ git format-patch master --stdout > small_fixes.patch
+```
+
+Or make a patch containing the last two commits:
+```bash
+$ git format-patch -2 --stdout > small_fixes.patch
 ```
 
 To apply the patch, first check what is in the patch:
@@ -46,7 +52,7 @@ Then check whether the patch gives any problems when applying:
 $ git apply --check small_fixes.patch
 ```
 
-Now apply the patch for real. Use `git apply` to apply the patch as single item and have all applied changes as unstaged changes. Use `git am` to apply every commit in the patch also on the target location. This way history is preserved and this is usually the preferred approach. With `git am` you can use the `--signoff` option to add "Signed-off-by:" line to the commit message, so it is clear who is responsible for adding the commits to the code. For now, we don't need the `--signoff` option.
+Now apply the patch for real. Use "git apply" to apply the patch as single item and have all applied changes as unstaged changes. Use "git am" to apply every commit in the patch also on the target location. This way history is preserved and this is usually the preferred approach. With "git am" you can use the "--signoff" option to add "Signed-off-by:" line to the commit message, so it is clear who is responsible for adding the commits to the code. For now, we don't need the "--signoff" option.
 
 ```bash
 $ git am < small_fixes.patch

