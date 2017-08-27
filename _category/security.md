@@ -1,5 +1,5 @@
 ---
 tag: security
-permalink: /posts/security
+permalink: /posts/security/
 ---
 
