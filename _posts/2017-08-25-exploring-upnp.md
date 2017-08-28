@@ -33,7 +33,7 @@ The UPnP stack consists of 6 layers:
 ## Discovery
 Let's discover some devices! UPnP uses HTTP over UDP (HTTPU) and broadcasts UPD packets on port 1900. The discovery protocol is known as Simple Service Discovery Protocol ([SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol)).
 
-{% highlight python %}
+```python
 import socket
 
 # Construct the message
@@ -56,7 +56,7 @@ try:
         print addr, data
 except socket.timeout:
     pass
-{% endhighlight %}
+```
 
 Check response
 
@@ -64,7 +64,7 @@ Query service
 
 Open port
 
-{% highlight python %}
+```python
 import urllib2
 
 soap_body = """<?xml version="1.0"?>
@@ -95,7 +95,7 @@ request = urllib2.Request(ctrl_url, soap_body, headers)
 response = urllib2.urlopen(request)
 
 print response.read()
-{% endhighlight %}
+```
 
 
 ---
