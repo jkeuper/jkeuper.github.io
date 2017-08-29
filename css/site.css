@@ -150,5 +150,8 @@ img.img-thumbnail {
 @media only screen and (max-width : 480px) {
   img.img-thumbnail {
     width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
