@@ -8,12 +8,9 @@ http://scotch-io.github.io/
 
 ## Development
 
-Requires Ruby 2.3 and Make. Only tested on Mac OS. 
+Requires Ruby 2.3 and Make. Tested on Linux and Mac OS. 
 Windows is known to behave badly with jekyll, 
 although workarounds do exist.
-
-Should work on Linux. 
-Easily verifyable by running a ci server instance travisCI
 
 First time use
 
@@ -31,6 +28,8 @@ make cibuild
 ```
 
 ## Continuous integration
+Our CI build:
+[![Build Status](https://travis-ci.org/jkeuper/jkeuper.github.io.svg?branch=master)](https://travis-ci.org/jkeuper/jkeuper.github.io)
 
 Serra's CI build:
 [![Build Status](https://travis-ci.org/serra/jkeuper.github.io.svg?branch=master)](https://travis-ci.org/serra/jkeuper.github.io)

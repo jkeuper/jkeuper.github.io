@@ -99,6 +99,7 @@ print response.read()
 
 
 ---
-https://www.electricmonk.nl/log/2016/07/05/exploring-upnp-with-python/
-http://mattscodecave.com/posts/using-python-and-upnp-to-forward-a-port.html
+<https://www.electricmonk.nl/log/2016/07/05/exploring-upnp-with-python/>
+
+<http://mattscodecave.com/posts/using-python-and-upnp-to-forward-a-port.html>
 

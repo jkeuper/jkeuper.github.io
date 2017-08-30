@@ -15,7 +15,7 @@ Finally I got fed up with my single-page website. In spired by my former co-work
 Just like Marijn, I host my site at github using github-pages. It works as a charm!
 
 A nice blog posting of Kyle Banks added some category listings to my website: 
-https://kylewbanks.com/blog/creating-category-pages-in-jekyll-without-plugins
+<https://kylewbanks.com/blog/creating-category-pages-in-jekyll-without-plugins>
 
 Maybe you would like to take a look at the [sources](https://github.com/jkeuper/jkeuper.github.io) of my website?
 

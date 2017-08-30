@@ -14,7 +14,7 @@ First of all start with a new branch:
 
 ```bash
 $ git checkout -b test_build
-Switched to a new branch 'test+build'
+Switched to a new branch 'test_build'
 ```
 
 In the "test_build" branch, we've made some minor fixes and add a new article.
