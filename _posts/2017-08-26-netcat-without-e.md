@@ -3,12 +3,12 @@ layout: inner
 title: 'Using netcat without -e'
 date: 2017-08-26 01:37
 categories: security
-tags: netcat hack draft
+tags: netcat hack
 featured_image: '/images/posts/netcat-a-swiss-army-tool-1-638.jpg'
-lead_text: 'Okay, okay, this is some kind of insiders thing. If you dont know what Im talking about from the title of this article, then there is nothing to see... Please move along!'
+lead_text: 'Okay, okay, this is some kind of insiders thing. If you dont know what Im talking about from the title of this article, then there is nothing to see. Please move along!'
 ---
 
-Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, not quite my expertise.
+Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, not quite my expertise. Finally I came up with a simple solution using _tail -f_.
 
 <img src="/images/posts/netcat_freebsd.png" 
      alt="Netcat on FreeBSD"
