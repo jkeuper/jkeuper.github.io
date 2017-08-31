@@ -3,7 +3,7 @@ layout: inner
 title: 'Patching with Git'
 date: 2017-08-27 22:50
 categories: development
-tags: git learn draft
+tags: git learn
 featured_image: '/images/posts/git.jpg'
 lead_text: 'How do you send commits to your coworkers or some other location without pushing them to a repository yet?'
 ---
