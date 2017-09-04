@@ -5,7 +5,7 @@ date: 2017-08-27 22:50
 categories: development
 tags: git learn
 featured_image: '/images/posts/git.jpg'
-lead_text: 'How do you send commits to your coworkers or some other location without pushing them to a repository yet?'
+lead_text: 'Send commits to your coworkers or some other location without pushing them to a repository yet'
 ---
 
 I am working on a windows laptop, so getting jekyll to work correctly seems to be troublesome. So before pushing changes to my repository, I would like to check them on a jekyll docker image running on my NAS. Using the "git format-patch" command, we export out commits and apply them on our jekyll docker image to build and html-proof our site.
