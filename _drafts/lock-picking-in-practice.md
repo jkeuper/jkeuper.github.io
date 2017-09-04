@@ -1,8 +1,14 @@
-Hacking is not only about software, not about criminal activities, it is about learning new ways to do things beyond what the manufacturer intended the product to do. It is a way of life, never stop learning...
+---
+layout: inner
+title: 'Lock picking in practice'
+date: 2017-09-04 02:37
+categories: security
+tags: lockpick hack
+featured_image: '/images/posts/mediaplayer1.png'
+lead_text: 'Hacking is not only about software, not about criminal activities, it is about learning new ways to do things beyond what the manufacturer intended the product to do. It is a way of life, never stop learning...'
+---
 
-Many years ago, I studied the _art_ of picking locks. Not to do anything illegal, but just to learn about locks and how they work. Most importantly, open locks in a non-destructive way the manufacturer certainly did not intend to open.
-
-I bought a lock picking set and a practice lock. Over the years I collected some other locks, formerly used in real life.
+Many years ago, I studied the _art_ of picking locks. Not to do anything illegal, but just to learn about locks and how they work. Most importantly, open locks in a non-destructive way the manufacturer certainly did not intend to open. I bought a lock picking set and a practice lock. Over the years I collected some other locks, formerly used in real life. I now got a chance to show off my skills.
 
 This weekend I received a call from a friend, asking whether I was still into hacking things. "Sure, you know me." I replied. He explained that he had a job to do tomorrow, but the motorcycle case he used to take his equipment was locked and he forgot to take the key with him. Of course I packed my tools and met him that evening.
 
