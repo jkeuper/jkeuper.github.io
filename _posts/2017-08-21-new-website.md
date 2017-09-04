@@ -10,7 +10,7 @@ lead_text: 'Two and a half years I have had my previous one-page website. Now fi
 
 Welcome to my new website!
 
-Finally I got fed up with my single-page website. In spired by my former co-worker Marijn from [Serra ICT](http://www.serraict.com/), I took a look at Jekyll. Soon I found Jekyll Bootstrap [here](https://github.com/scotch-io/scotch-io.github.io), which seem to fit my needs perfectly! Just like Marijn, I host my site at github using github-pages. It works as a charm!
+Finally I got fed up with my single-page website. In spired by my former co-worker Marijn from [Serra ICT](http://www.serraict.com/), I took a look at Jekyll. Soon I found a Bootstrap 3 template for Jekyll [here](https://github.com/scotch-io/scotch-io.github.io), which seem to fit my needs perfectly! Just like Marijn, I host my site at github using github-pages. It works as a charm!
 
 A nice blog posting of Kyle Banks showed how to add some category listings to my website: 
 <https://kylewbanks.com/blog/creating-category-pages-in-jekyll-without-plugins>
