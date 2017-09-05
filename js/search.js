@@ -70,6 +70,8 @@ var searchIdx;
     searchTerm = document.getElementById('search-box').getAttribute("value");
     window.location = '/search/?query=' + searchTerm
     doSearch(searchTerm);
+
+    return false;
   }
 
   var searchTerm = getQueryVariable('query');
