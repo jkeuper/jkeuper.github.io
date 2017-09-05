@@ -30,7 +30,7 @@ permalink: /search/
 </div>
 <script>
   window.store = {
-    {% assign skip_pages = "/|/atom.xml|/feed.xml|/posts/|/search/|/css/style.css|/assets/css/style.css" | split: "|" %}
+    {% assign skip_pages = "/atom.xml|/feed.xml|/posts/|/search/|/css/style.css|/assets/css/style.css" | split: "|" %}
     {% for node in site.pages %}
     {% unless skip_pages contains node.url %}
     "{{ node.url | slugify }}": {

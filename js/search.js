@@ -57,7 +57,7 @@
     
     //var results = idx.search(searchTerm); // Get lunr to perform a search
     var results = idx.query(function (q) {
-                            q.term("*" + searchTerm + "*", { fields: ["title", "content", "category", "key"] })
+                            q.term("*" + searchTerm + "*"})
                           });
     displaySearchResults(results, window.store); // We'll write this in the next section
   }
