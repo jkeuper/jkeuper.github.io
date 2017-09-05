@@ -10,20 +10,18 @@ permalink: /search/
             {{ page.title }}
         </span>
     </h1>
+    <p class="lead">
+        <form action="/search/" method="get">
+            <input type="text" id="search-box" name="query">
+            <input type="submit" value="search" id="search-button">
+        </form>
+    </p>
 </div>
 <article>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <form action="/search/" method="get">
-                    <input type="text" id="search-box" name="query">
-                    <input type="submit" value="search" id="search-button">
-                </form>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <ul id="search-results" class="list-unstyled"></ul>
-                </div>
+                <ul id="search-results" class="list-unstyled"></ul>
             </div>
         </div>
     </div>
