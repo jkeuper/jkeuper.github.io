@@ -18,7 +18,6 @@ permalink: /search/
           <input type="submit" value="search">
       </form>
     </div>
-  
     <article>
         <div class="container">
             <div class="row">
@@ -31,13 +30,13 @@ permalink: /search/
 </div>
 <script>
   window.store = {
-    {% assign skip_pages = "/atom.xml|/feed.xml|/search/|/css/style.css" | split: "|" %}
+    {% assign skip_pages = "/|/atom.xml|/feed.xml|/posts/|/search/|/css/style.css|/assets/css/style.css" | split: "|" %}
     {% for node in site.pages %}
     {% unless skip_pages contains node.url %}
     "{{ node.url | slugify }}": {
         "title": "{{ node.title | xml_escape }}",
         "category": "{{ node.categories | xml_escape }}",
-        "content": {{ node.content | strip_html | strip_newlines | jsonify }},
+        "content": {{ node.content | strip_html | strip_newlines | strip | jsonify }},
         "url": "{{ node.url | xml_escape }}"
     },
     {% endunless %}

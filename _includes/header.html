@@ -41,7 +41,6 @@
     <link href="/css/site.css" rel="stylesheet">
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout-class %} layout-{{ page.layout-class }}{% endif %}">
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -55,11 +54,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    {% for item in site.data.nav.main %}
-                        <li>
-                            <a href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
-                    {% endfor %}
+                    {% for item in site.data.nav.main %}<li>
+                        <a href="{{ item.url }}">{{ item.text }}</a>
+                    </li>{% endfor %}
                 </ul>
             </div>
         </div>
