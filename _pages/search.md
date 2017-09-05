@@ -11,23 +11,23 @@ permalink: /search/
         </span>
     </h1>
 </div>
-<div class="container">
-    <div class="page-header">
-        <form action="/search/" method="get">
-          <input type="text" id="search-box" name="query">
-          <input type="submit" value="search" id="search-button">
-      </form>
-    </div>
-    <article>
-        <div class="container">
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <form action="/search/" method="get">
+                    <input type="text" id="search-box" name="query">
+                    <input type="submit" value="search" id="search-button">
+                </form>
+            </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <ul id="search-results" class="list-unstyled"></ul>
                 </div>
             </div>
         </div>
-    </article>
-</div>
+    </div>
+</article>
 <script>
   window.store = {
     {% assign skip_pages = "/atom.xml|/feed.xml|/posts/|/search/|/css/style.css|/assets/css/style.css" | split: "|" %}
