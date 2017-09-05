@@ -6,6 +6,7 @@ categories: security
 tags: upnp hack draft
 featured_image: '/images/posts/mediaplayer1.png'
 lead_text: 'UPnP is a network technology that lets devices on your network set up rules on your router or modem automatically to allow the connections they need. UPnP is a really simple way to make sure you can connect to all kinds of services and is often recommended.'
+published: false
 ---
 
 To me Universal Plug and Play (UPnP) alway was a mysterious protocol. When some cool program required an open port, UPnP made it happen. When some fancy program did not work, someone would ask me: "Did you enable UPnP"? Right, I forgot... I had no clue what magic UPnP did for me.
@@ -33,6 +34,8 @@ The UPnP stack consists of 6 layers:
 ## Discovery
 Let's discover some devices! UPnP uses HTTP over UDP (HTTPU) and broadcasts UPD packets on port 1900. The discovery protocol is known as Simple Service Discovery Protocol ([SSDP](https://en.wikipedia.org/wiki/Simple_Service_Discovery_Protocol)).
 
+From the top, we'll do a M-SEARCH request to the broadcast address 192.168.1.255 on port 1900. We are querying for devices with the InternetGatewayDevice profile:
+
 ```python
 import socket
 
@@ -40,7 +43,7 @@ import socket
 msg = \
     'M-SEARCH * HTTP/1.1\r\n' \
     'HOST:192.168.1.255:1900\r\n' \
-    'ST:upnp:rootdevice\r\n' \
+    'ST:urn:schemas-upnp-org:device:InternetGatewayDevice:1\r\n' \
     'MX:2\r\n' \
     'MAN:"ssdp:discover"\r\n'
 
@@ -58,11 +61,41 @@ except socket.timeout:
     pass
 ```
 
-Check response
+## Discovery Response
+Running the script gives the response below. What we are interested in is the "LOCATION" value:
 
-Query service
+```bash
+('192.168.1.1', 1900) HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=120
+ST: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+USN: uuid:A37351C5-8521-4c24-A43E-AC22055E489C::urn:schemas-upnp-org:device:InternetGatewayDevice:1
+EXT:
+SERVER: Compal Broadband Networks, Inc/Linux/2.6.39.3 UPnP/1.1 MiniUPnPd/1.7
+LOCATION: http://192.168.1.1:5000/rootDesc.xml
+OPT: "http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS: 1
+BOOTID.UPNP.ORG: 1
+CONFIGID.UPNP.ORG: 1337
+```
 
-Open port
+## Query description
+The desciption xml is a bit long. We'll show the most important part below. From the service information,
+we are looking for the controlUrl:
+
+```xml
+  ...
+  <service>
+    <serviceType>urn:schemas-upnp-org:service:WANIPConnection:1</serviceType>
+    <serviceId>urn:upnp-org:serviceId:WANIPConn1</serviceId>
+    <controlURL>/ctl/IPConn</controlURL>
+    <eventSubURL>/evt/IPConn</eventSubURL>
+    <SCPDURL>/WANIPCn.xml</SCPDURL>
+  </service>
+  ...
+```
+
+## Open port
+We have the address, the port and the path of the control URL. Now let's craft a soap message to open external port 35000 and map it to port 35000 on our internal ip 192.269.1.90.
 
 ```python
 import urllib2
@@ -83,18 +116,24 @@ soap_body = """<?xml version="1.0"?>
 </soap-env:envelope>"""
 
 headers = {
-    'SOAPAction': 'urn:schemas-upnp-org:service:WANIPConnection:1#NewPortMappingDescription',
-    'Host': '192.168.0.1:40833',
+    'SOAPAction': 'urn:schemas-upnp-org:service:WANIPConnection:1#AddPortMapping',
+    'Host': '192.168.1.1:5000/',
     'Content-Type': 'text/xml',
     'Content-Length': len(soap_body),
 }
 
-ctrl_url = "http://192.168.0.1:40833/ctl/IPConn"
+ctrl_url = "http://192.168.1.1:5000/ctl/IPConn"
 
 request = urllib2.Request(ctrl_url, soap_body, headers)
 response = urllib2.urlopen(request)
 
 print response.read()
+```
+
+Now, send this message and show the response:
+
+```bash
+
 ```
 
 
