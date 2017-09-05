@@ -73,7 +73,7 @@ var searchIdx;
   }
 
   var searchTerm = getQueryVariable('query');
-  searchIdx = initInd();
+  searchIdx = initIdx();
   
   if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
