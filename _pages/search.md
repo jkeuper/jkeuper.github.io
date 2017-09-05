@@ -1,5 +1,5 @@
 ---
-layout: inner
+layout: default
 title: Search
 permalink: /search/
 ---
@@ -13,7 +13,7 @@ permalink: /search/
 </div>
 <div class="container">
     <div class="page-header">
-        <form action="/search.html" method="get">
+        <form action="/search/" method="get">
           <input type="text" id="search-box" name="query">
           <input type="submit" value="search">
       </form>
@@ -31,14 +31,17 @@ permalink: /search/
 </div>
 <script>
   window.store = {
-    {% for node in site.pages %}
-    "{{ node.url | slugify }}": {
+    {% assign skip_pages = "/atom.xml|/feed.xml|/search/|/assets/css/style.css" | split: "|" %}
+    {% for node in site.pages %}
+    {% unless skip_pages contains node.url %}
+    "{{ node.url | slugify }}": {
         "title": "{{ node.title | xml_escape }}",
         "category": "{{ node.categories | xml_escape }}",
         "content": {{ node.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ node.url | xml_escape }}"
     },
-    {% endfor %}
+    {% endunless %}
+    {% endfor %}
     {% for post in site.posts %}
     "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
