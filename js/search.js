@@ -1,3 +1,5 @@
+var searchIdx;
+
 (function() {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
@@ -30,11 +32,7 @@
     }
   }
 
-  var searchTerm = getQueryVariable('query');
-
-  if (searchTerm) {
-    document.getElementById('search-box').setAttribute("value", searchTerm);
-
+  function initIdx() {
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
@@ -54,11 +52,31 @@
         });
       }
     });
-    
+
+    return idx;
+  }
+
+  function doSearch(searchTerm)
+  {
     //var results = idx.search(searchTerm); // Get lunr to perform a search
-    var results = idx.query(function (q) {
-                            q.term("*" + searchTerm + "*")
-                          });
+    var results = searchIdx.query(function (q) {
+      q.term("*" + searchTerm + "*")
+    });
     displaySearchResults(results, window.store); // We'll write this in the next section
+  }
+
+  document.getElementById('search-button').onclick = function()
+  {
+    searchTerm = document.getElementById('search-box').getAttribute("value");
+    window.location = '/search/?query=' + searchTerm
+    doSearch(searchTerm);
+  }
+
+  var searchTerm = getQueryVariable('query');
+  searchIdx = initInd();
+  
+  if (searchTerm) {
+    document.getElementById('search-box').setAttribute("value", searchTerm);
+    doSearch(searchTerm);
   }
 })();

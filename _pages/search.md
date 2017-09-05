@@ -15,7 +15,7 @@ permalink: /search/
     <div class="page-header">
         <form action="/search/" method="get">
           <input type="text" id="search-box" name="query">
-          <input type="submit" value="search">
+          <input type="submit" value="search" id="search-button">
       </form>
     </div>
     <article>
@@ -45,7 +45,7 @@ permalink: /search/
     "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "content": {{ post.content | strip_html | strip_newlines | strip | jsonify }},
         "url": "{{ post.url | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
