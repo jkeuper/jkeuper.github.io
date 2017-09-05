@@ -67,7 +67,7 @@ var searchIdx;
 
   document.getElementById('search-button').onclick = function()
   {
-    searchTerm = document.getElementById('search-box').getAttribute("value");
+    searchTerm = document.getElementById('search-box').value;
     doSearch(searchTerm);
 
     return false;
