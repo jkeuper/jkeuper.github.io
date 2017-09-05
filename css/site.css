@@ -7,8 +7,24 @@ html {
 }
 body {
   color: #5a5a5a;
-  min-height: 100vh;
+  height: 100%;
 }
+* {
+  margin: 0;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 310px; 
+}
+
 
 /* GLOBAL CHANGES
 -------------------------------------------------- */
