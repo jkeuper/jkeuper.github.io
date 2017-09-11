@@ -40,6 +40,10 @@ baseurl: "" # does not include hostname
 url:     http://www.keuperict.nl
 repository: "jkeuper/jkeuper.github.io"
 
+# Staticman comments (full configuration in staticman.yml)
+staticman:
+  branch                 : "master"
+
 # Outputting
 permalink:     /posts/:categories/:year/:month/:day/:title/
 paginate: 10
