@@ -1,5 +1,4 @@
 ---
-layout: inner
 title: 'Using netcat without -e'
 date: 2017-08-26 01:37
 categories: security

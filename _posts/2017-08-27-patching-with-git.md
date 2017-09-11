@@ -1,5 +1,4 @@
 ---
-layout: inner
 title: 'Patching with Git'
 date: 2017-08-27 22:50
 categories: development

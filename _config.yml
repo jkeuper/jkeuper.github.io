@@ -52,12 +52,15 @@ timezone:      null
 
 quiet:    false
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: category
     values:
       layout: "category"
+  - scope:
+      path: _posts
+    values:
+      layout: post
 
 # Markdown Processors
 rdiscount:

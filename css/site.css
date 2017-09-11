@@ -27,6 +27,26 @@ body {
   height: 90px; 
 }
 
+div.entry-comments {
+  margin-top: 70px;
+}
+
+.entry-comments .section-title {
+  position: relative;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.563em;
+}
+
+.entry-comments .section-title:before {
+  position: absolute;
+  top: -.5em;
+  width: 3em;
+  height: .25em;
+  background-color: #d7d8da;
+  content: "";
+}
 
 /* GLOBAL CHANGES
 -------------------------------------------------- */

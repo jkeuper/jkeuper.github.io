@@ -1,5 +1,4 @@
 ---
-layout: inner
 title: 'Explore Universal Plug and Play'
 date: 2017-08-25 02:37
 categories: security

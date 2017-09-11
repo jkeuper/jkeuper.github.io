@@ -1,7 +1,6 @@
 ---
-layout: inner
 title: 'Static comments with Jekyll and Staticman'
-date: 2017-08-21 13:37
+date: 2017-09-11 22:22
 categories: other
 tags: website
 featured_image: '/images/posts/comments-jekyll.png'

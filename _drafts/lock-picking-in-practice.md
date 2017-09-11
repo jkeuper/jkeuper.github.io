@@ -1,5 +1,5 @@
 ---
-layout: inner
+layout: post
 title: 'Lock picking in practice'
 date: 2017-09-04 02:37
 categories: security
