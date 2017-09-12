@@ -6,7 +6,7 @@
     position: relative;
     margin-bottom: 4em;
     padding-left: 4.5em;
-    font-size: 0.8em;
+    font-size: 1.0em;
   
     // comment replies
     &.child {
@@ -16,7 +16,7 @@
   
   .comment-timestamp {
     font-size: 0.8em;
-  
+    line-height: 0.8em;
     a {
       color: inherit;
       text-decoration: none;
@@ -69,27 +69,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    img {
     width: 3.25em;
     height: 3.25em;
-  
-    &::after {
-      position: absolute;
-      right: 0.5em;
-      bottom: 0.5em;
-      width: 3.25em;
-      height: 3.25em;
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='stripe-svg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M-1,1 l2,-2 M0,10 l10,-10 M9,11 l2,-2' stroke='%23333' stroke-width='1' /%3E%3C/svg%3E");
-      background-size: 5px 5px;
-      content: '';
-      z-index: -1;
     }
   }
   
   .comment-author-name {
     display: inline-block;
-    margin: 0 0 0.25em;
+    margin: 0 0 0.1em;
     font-size: 1.25em;
-    line-height: 1;
+    line-height: 0.5;
   
     a {
       color: inherit;
@@ -99,6 +89,7 @@
   
   .comment-reply {
     text-align: right;
+    margin-top: -25px;
   
     a {
       text-decoration: none;
@@ -119,6 +110,10 @@
   
   #comment-form {
     margin-bottom: 3em;
+    label.pull-right .note {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
   }
   
   /* Site author specific */

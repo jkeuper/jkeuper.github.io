@@ -6,7 +6,8 @@
   </header>
   <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
     <div class="form-group">
-      <label for="comment-form-message"><strong>Comment</strong> <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+      <label for="comment-form-message"><strong>Comment</strong></label>
+      <label class="pull-right note"><small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
       <textarea class="form-control" type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true"></textarea>
     </div>
     <div class="form-group">
@@ -14,7 +15,8 @@
       <input class="form-control" type="text" id="comment-form-name" name="fields[name]" required spellcheck="false">
     </div>
     <div class="form-group">
-      <label for="comment-form-email"><strong>Email</strong> <small>(used for <a href="http://gravatar.com">Gravatar</a> image and reply notifications)</small></label>
+      <label for="comment-form-email"><strong>Email</strong></label>
+      <label class="pull-right note"><small>(used for <a href="http://gravatar.com">Gravatar</a> image and reply notifications)</small></label>
       <input class="form-control" type="email" id="comment-form-email" name="fields[email]" required spellcheck="false">
     </div>
     <div class="form-group">
@@ -35,11 +37,11 @@
     </p>
     <!-- End comment form alert messaging -->
     <div class="form-group">
-      <label class="comment-reply-notifications" for="comment-form-reply">
+      <button type="submit" id="comment-form-submit" class="btn">Send Comment</button>
+      <label class="pull-right comment-reply-notifications" for="comment-form-reply">
         <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
         Notify me of replies by email.
       </label>
-      <button type="submit" id="comment-form-submit" class="btn">Send Comment</button>
     </div>
   </form>
 </div>

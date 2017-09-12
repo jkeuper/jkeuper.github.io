@@ -61,6 +61,7 @@ defaults:
       path: _posts
     values:
       layout: post
+      comments: true
 
 # Markdown Processors
 rdiscount:
