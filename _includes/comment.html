@@ -1,11 +1,11 @@
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% unless include.replying_to == 0 %}child{% endunless %}">
     <div class="comment-avatar">
       {% if include.avatar %}
-        <img class="thumbnail" src="{{ include.avatar }}" alt="">
+        <img class="thumbnail" src="{{ include.avatar }}" alt="Gravatar of {{ include.name }}">
       {% elsif include.email %}
-        <img class="thumbnail" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x" alt="">
+        <img class="thumbnail" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x" alt="Gravatar of {{ include.name }}">
       {% else %}
-        <img class="thumbnail" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x" alt="">
+        <img class="thumbnail" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x" alt="Gravatar of {{ include.name }}">
       {% endif %}
     </div>
     <h3 class="comment-author-name">
