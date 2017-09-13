@@ -5,7 +5,7 @@ categories: other
 tags: website
 featured_image: '/images/posts/launch.png'
 lead_text: 'Two and a half years I have had my previous one-page website. Now finally got enough inspiration to create something decent.'
-comments_locked: true
+comments_locked: false
 ---
 
 Welcome to my new static website generated with Jekyll!
