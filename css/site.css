@@ -27,6 +27,11 @@ body {
   height: 90px; 
 }
 
+
+div.js-comments {
+  margin-bottom: 3em;
+}
+
 div.entry-comments {
   margin-top: 70px;
 }
@@ -34,7 +39,7 @@ div.entry-comments {
 .entry-comments .section-title {
   position: relative;
   margin-top: 4rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.563em;
