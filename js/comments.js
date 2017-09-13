@@ -8,7 +8,7 @@
     var form = this;
 
     $(form).addClass('disabled');
-    $('#comment-form-submit').html('<svg class="icon spin" width="15px" height="15px"><use xlink:href="/images/icons.svg#icon-loading"></use></svg> Loading...');
+    $('#comment-form-submit').html('<svg class="icon fa-spin" width="16px" height="16px"><use xlink:href="/images/icons.svg#icon-loading"></use></svg> &nbsp; Loading...');
 
     $.ajax({
       type: $(this).attr('method'),
