@@ -2,7 +2,7 @@
 title: 'This is my new website'
 date: 2017-08-21 13:37
 categories: other
-tags: website
+tags: website jekyll
 featured_image: '/images/posts/launch.png'
 lead_text: 'Two and a half years I have had my previous one-page website. Now finally got enough inspiration to create something decent.'
 comments_locked: false
