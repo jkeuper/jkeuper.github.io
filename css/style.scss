@@ -110,7 +110,7 @@ h1.special {
 
 .tile {
     position: relative;
-    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);
+    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.285);
     margin-bottom: 125px;
 
     .inner-guts { padding: 50px; }
@@ -129,7 +129,7 @@ h1.special {
         overflow: hidden;
         margin-bottom: 15px;
         width: 100%;
-        height: 550px;
+        height: 400px;
         background-color: #e8e8e8;
 
         .img {
