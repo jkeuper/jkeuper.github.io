@@ -44,7 +44,8 @@ Jasper Keuper<br />
   </div>
   <div class="form-group">
     <label for="message">Message</label>
-    <textarea class="form-control" type="textarea" id="message" rows="7"></textarea>
+    <textarea class="form-control" type="textarea" id="message" name="message" rows="7"></textarea>
+    <input type="hidden" name="_next" value="http://www.keuperict.nl/thanks/" /> 
   </div>
   <button type="submit" class="btn btn-primary">Send message</button>
 </form>
