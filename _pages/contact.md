@@ -5,7 +5,7 @@ permalink: /contact/
 lead_text: 'Please send me any comments, questions or just drop me a message!'
 ---
 
-<div class="col-sm-3">
+<div class="col-sm-4">
 <h2>My contact details</h2>
 <hr>
 <span class="fa-stack">
@@ -30,7 +30,7 @@ Jasper Keuper<br />
 <a href="//www.keuperict.nl">www.keuperict.nl</a><br />
 </div>
 
-<div class="col-md-8">
+<div class="col-sm-8">
 <h2>Or send me a message</h2>
 <hr>
 <form action="https://formspree.io/jasper@keuperict.nl" method="POST">
