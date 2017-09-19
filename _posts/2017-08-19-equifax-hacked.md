@@ -1,6 +1,6 @@
 ---
 title: 'Equifax hack'
-date: 2017-09-27 21:20
+date: 2017-09-19 10:20
 categories: security
 tags: hack
 featured_image: '/images/posts/facepalm.jpg'
@@ -10,12 +10,13 @@ lead_text: 'When your credit rating firm gets hacked'
 Equifax is a consumer credit reporting agency and last week it got hacked. Now
 the information of **143 milion US citizens**, about 45% of the population, has
 been compromised by hackers. The hackers got access to names, birth dates,
-addresses but also social sercurity numbers and drivers license numbers. Now
-that is _really_ bad! This got me thinking and I just had to write about it.
+addresses but also social sercurity numbers and in some cases drivers license numbers. 
+This is a _really_ big thing! It got me thinking and I just had to write about it.
 
 With this kind of information it is possible to impersonate people at banks,
-credit card companies, etc and even the government. And what about your privacy,
-the hackers even know your credit information.
+credit card companies, etc and even the government. For example apply for loan,
+credit card or even a mortgage in _your_ name. And what about your privacy?
+The hackers even obtained your credit information.
 
 ## How did this happen?
 Well, Equifax was using Apache Struts which contained a
