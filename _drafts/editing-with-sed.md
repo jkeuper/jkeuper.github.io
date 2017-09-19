@@ -48,7 +48,7 @@ _Insert XXX at line 5_
 $ sed -e '5iXXX' readme.txt
 ```
 
-For some basic operations we don's use sed at all. Creating and ppending to files is even easier without sed:
+For some basic operations we don's use sed at all. Creating and appending to files is even easier without sed.
 ```bash
 $ echo First line > readme.txt
 $ echo Second line >> readme.txt
