@@ -27,7 +27,7 @@ Jasper Keuper<br />
 <i class="fa fa-square fa-stack-2x"></i>
 <i class="fa fa-stack-1x fa-globe fa-inverse" aria-hidden="true"></i>
 </span>
-<a href="//www.keuperict.nl">www.keuperict.nl</a><br />
+<a href="{{ site.url }}">keuperict.nl</a><br />
 </div>
 
 <div class="col-sm-8">
@@ -45,7 +45,7 @@ Jasper Keuper<br />
   <div class="form-group">
     <label for="message">Message</label>
     <textarea class="form-control" type="textarea" id="message" name="message" rows="7"></textarea>
-    <input type="hidden" name="_next" value="http://www.keuperict.nl/thanks/" /> 
+    <input type="hidden" name="_next" value="{{ site.url }}/thanks/" /> 
   </div>
   <button type="submit" class="btn btn-primary">Send message</button>
 </form>
