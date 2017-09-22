@@ -5,6 +5,7 @@ categories: development
 tags: .net csharp reflection
 featured_image: '/images/posts/vs-reflection.jpg'
 lead_text: 'Implementing dynamic properties using the ICustomTypeDescriptor interface to show in a PropertyGrid control?'
+published: false
 ---
 
 In the .NET Framework using reflection was always a bit cool when you needed it
@@ -151,6 +152,10 @@ Of course you can get fancy with attributes to for example provide a
 description, category, etc.  You can also use the TypeConverterAttribute to
 specify what editor should be used for a given property. Or even extend from
 UITypeEditor to create your own editor.
+
+For example, using the property grid to make a quick settings dialog or
+a window containing a debug view for objects can easily be done like
+this.
 
 ## Some background
 Back in 2005 I created a [program](http://wixedit.sourceforge.net/) for a
