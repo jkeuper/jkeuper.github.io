@@ -1,6 +1,6 @@
 ---
 title: 'Tricking reflection with ICustomTypeDescriptor Interface'
-date: 2017-09-30 22:50
+date: 2017-09-26 00:27
 categories: development
 tags: .net csharp reflection
 featured_image: '/images/posts/vs-reflection.jpg'
@@ -14,6 +14,10 @@ using it. Querying objects at runtime and even call properties and execute
 methods on that object, that's awesome! But what about having an interface that
 answers those queries?
 
+
+<img src="/images/posts/propertygrid.jpg" 
+     alt="Complex propertygrid"
+     class="media pull-right img-thumbnail">
 The [ICustomTypeDescriptor](https://msdn.microsoft.com/en-us/library/system.componentmodel.icustomtypedescriptor(v=vs.110).aspx)
 interface can be used to implement your own way to provide information about
 objects. For example show your own properties in the
@@ -64,7 +68,8 @@ public class CustomObject : ICustomTypeDescriptor
         // Create and add PropertyDescriptors
         foreach (string key in ValuesContainer.Keys)
 	{
-            CustomPropertyDescriptor pd = new CustomPropertyDescriptor (ValuesContainer, key, attrArray);
+            CustomPropertyDescriptor pd =
+	              new CustomPropertyDescriptor (ValuesContainer, key, attrArray);
             props.Add(pd);
         }
         

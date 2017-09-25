@@ -11,14 +11,14 @@ I am working on a windows laptop, so getting jekyll to work correctly seems to b
 
 First of all start with a new branch:
 
-```bash
+```console
 $ git checkout -b test_build
 Switched to a new branch 'test_build'
 ```
 
 In the "test_build" branch, we've made some minor fixes and add a new article.
 
-```bash
+```console
 $ git log --pretty=oneline -2
 ea88d654638714c54ede324244ce17bc456365ef Fixed highlighting code
 9afa570100bd49b992e636f0d530fa4125d8c507 Fixed links in carousel
@@ -26,19 +26,19 @@ ea88d654638714c54ede324244ce17bc456365ef Fixed highlighting code
 
 Create a single patch file, instead of patches per commit:
 
-```bash
+```console
 $ git format-patch master --stdout > small_fixes.patch
 ```
 
 Or make a patch containing the last two commits:
 
-```bash
+```console
 $ git format-patch -2 --stdout > small_fixes.patch
 ```
 
 To apply the patch, first check what is in the patch:
 
-```bash
+```console
 $ git apply --stat small_fixes.patch
  _includes/carousel.html               |    4 ++--
  _posts/2017-08-25-exploring-upnp.md   |    8 ++++----
@@ -48,13 +48,13 @@ $ git apply --stat small_fixes.patch
 
 Then check whether the patch gives any problems when applying:
 
-```bash
+```console
 $ git apply --check small_fixes.patch
 ```
 
 Now apply the patch for real. Use "git apply" to apply the patch as single item and have all applied changes as unstaged changes. Use "git am" to apply every commit in the patch also on the target location. This way history is preserved and this is usually the preferred approach. With "git am" you can use the "--signoff" option to add "Signed-off-by:" line to the commit message, so it is clear who is responsible for adding the commits to the code. For now, we don't need the "--signoff" option.
 
-```bash
+```console
 $ git am < small_fixes.patch
 Applying: Fixed links in carousel
 Applying: Fixed highlighting code

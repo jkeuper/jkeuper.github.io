@@ -36,6 +36,15 @@ div.entry-comments {
   margin-top: 70px;
 }
 
+td.code {
+  width: 100%;
+}
+
+img.zoom {
+  width: 100% !important;
+  margin-bottom: 2em !important;
+}
+
 .entry-comments .section-title {
   position: relative;
   margin-top: 4rem;

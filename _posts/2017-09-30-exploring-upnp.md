@@ -2,7 +2,7 @@
 title: 'Explore Universal Plug and Play'
 date: 2017-09-30 02:37
 categories: security
-tags: upnp hack
+tags: upnp hack learn
 featured_image: '/images/posts/mediaplayer1.png'
 lead_text: 'UPnP is a network technology that lets devices on your network set up rules on your router or modem automatically to allow the connections they need. UPnP is a really simple way to make sure you can connect to all kinds of services and is often recommended.'
 published: false
@@ -83,7 +83,7 @@ except socket.timeout:
 Running the script gives the response below. What we are interested in is
 the "LOCATION" value:
 
-```bash
+```console
 ('192.168.1.1', 1900) HTTP/1.1 200 OK
 CACHE-CONTROL: max-age=120
 ST: urn:schemas-upnp-org:device:InternetGatewayDevice:1
@@ -151,7 +151,7 @@ print response.read()
 
 Now, send this message and show the response:
 
-```bash
+```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
             s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
@@ -171,4 +171,36 @@ With UPnP an attacker has a golden opportunity to gain access to your network.
 Vulnerable services could expose them self to the world or attackers might
 be able to open a port on your router. You better disable UPnP on your router.
 
+Of course there are easier ways to forward a port using UPnP. A nice tool is [MiniUPnPc](http://miniupnp.free.fr/) which allows you to execute UPnP commands from the command line.
+
+Forwarding a port 8888 of the current machine can be done by executing
+the following command.
+```console
+$ upnpc -e 'Added port via upnp' -r 8888 TCP
+```
+
+To list all port redirections.
+```console
+$ upnpc -l
+upnpc : miniupnpc library test client. (c) 2005-2014 Thomas Bernard
+Go to http://miniupnp.free.fr/ or http://miniupnp.tuxfamily.org/
+for more information.
+List of UPNP devices found on the network :
+ desc: http://192.168.1.1:5000/rootDesc.xml
+ st: urn:schemas-upnp-org:device:InternetGatewayDevice:1
+
+Found valid IGD : http://192.168.1.1:5000/ctl/IPConn
+Local LAN ip address : 192.168.1.165
+Connection Type : IP_Routed
+Status : Connected, uptime=3231463s, LastConnectionError : ERROR_NONE
+  Time started : Sat Aug 19 14:33:19 2017
+MaxBitRateDown : 10000000 bps (10.0 Mbps)   MaxBitRateUp 1000000 bps (1.0 Mbps)
+ExternalIPAddress = **.**.**.**
+ i protocol exPort->inAddr:inPort description remoteHost leaseTime
+ 1 TCP  8888->192.168.1.165:8888  'Added port via upnp' '' 0
+GetGenericPortMappingEntry() returned 713 (SpecifiedArrayIndexInvalid)
+$ 
+```
+
+Much easier than scripting it all yourself, but now you have learned how UPnP work!
 
