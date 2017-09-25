@@ -5,7 +5,6 @@ categories: development
 tags: .net csharp reflection
 featured_image: '/images/posts/vs-reflection.jpg'
 lead_text: 'Implementing dynamic properties using the ICustomTypeDescriptor interface to show in a PropertyGrid control?'
-published: false
 ---
 
 In the .NET Framework using reflection was always a bit cool when you needed it
