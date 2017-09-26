@@ -4,13 +4,18 @@ title: Tags
 permalink: /tags/
 ---
 
-<div class="title-group">
-    <h1 class="special" id="titleblock" style="display: none">
+<div class="title-group" id="titleblock" style="display: none">
+    <h1 class="special">
         <span>
-            Tagged with <span class="text-muted" id="tagHere"></span>
+            Tagged with <label class="text-muted" id="tagHere"></label>
         </span>
     </h1>
-    <h1 class="special" id="notitleblock" style="display: none">
+    <p>
+	<a class="btn btn-primary" href="#moretags">Discover other tags</a>
+    </p>
+</div>
+<div class="title-group" id="notitleblock" style="display: none">
+    <h1 class="special">
         <span>
             Articles by tag
         </span>
@@ -34,7 +39,7 @@ permalink: /tags/
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h2>Tags</h2>
+                <h2 id="moretags" style="display: none">All tags</h2>
                 {% if site.tags.first[0] == null %} 
                     {% for tag in site.tags %}  
                         <a class="btn btn-primary" href="?{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
@@ -69,8 +74,10 @@ function ShowByTag() {
                 tagHere.innerHTML = '#'+tag;
                 var titleblock = document.getElementById('titleblock');
                 titleblock.style.display = '';
+                var moretags = document.getElementById('moretags');
+                moretags.style.display = '';
 
-                var i;
+                var i;
                 for (i = 0; i < posts.length; i++)
                 {
                     posts[i].style.display = ''; 
