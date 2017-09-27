@@ -2,7 +2,7 @@
 title: 'Lock picking in practice'
 date: 2017-09-13 22:37
 categories: security
-tags: lockpick hack
+tags: lockpick hack realworld
 featured_image: '/images/posts/lockpicking.jpg'
 lead_text: 'Hacking is not only about software, not about criminal activities, it is about learning new ways to do things beyond what the manufacturer intended the product to do.'
 ---

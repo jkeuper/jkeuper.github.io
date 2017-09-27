@@ -1,4 +1,6 @@
 <div class="entry-comments">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
     {% if site.repository and site.staticman.branch %}
       {% if site.data.comments[page.slug] %}
         <!-- Start static comments -->
@@ -25,4 +27,6 @@
   
       {% include comment-form.html %}
     {% endif %}
+    </div>
   </div>
+</div>

@@ -2,7 +2,7 @@
 title: 'Equifax hack'
 date: 2017-09-19 10:20
 categories: security
-tags: hack
+tags: hack hacked vulnerability realworld
 featured_image: '/images/posts/facepalm.jpg'
 lead_text: 'When your credit rating firm gets hacked'
 ---

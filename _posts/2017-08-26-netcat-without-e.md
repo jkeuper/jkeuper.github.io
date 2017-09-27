@@ -2,7 +2,7 @@
 title: 'Using netcat without -e'
 date: 2017-08-26 01:37
 categories: security
-tags: netcat hack
+tags: netcat hack learn
 featured_image: '/images/posts/netcat-a-swiss-army-tool-1-638.jpg'
 lead_text: 'Okay, okay, this is some kind of insiders thing. If you dont know what Im talking about from the title of this article, then there is nothing to see. Please move along!'
 ---
