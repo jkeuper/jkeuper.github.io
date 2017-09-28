@@ -1,10 +1,11 @@
 ---
 title: 'Editing with sed'
-date: 2017-09-22 22:20
+date: 2017-10-10 22:20
 categories: security
-tags: sed learn hack
+tags: sed learn hack editor
 featured_image: '/images/posts/sed.png'
 lead_text: 'Editing files in a non-interactive reverse shell can be done easily with sed'
+published: false
 ---
 
 At times I find myself in situations in which I can not rely on my favorite commandline text editor VIM.
@@ -126,3 +127,4 @@ $ grep -rnw ./ -e fubar
 Sed is a really powerful tool, but it is difficult to remember the syntax besides all those other
 tools. I guess the only solution is to use it more often and maybe come visit this article to 
 freshen up your memory! More details and samples can be found [here](https://www.computerhope.com/unix/used.htm).
+

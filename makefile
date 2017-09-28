@@ -28,5 +28,5 @@ serve:
 	bundle exec jekyll serve
 
 serve-future:
-	bundle exec jekyll serve --future
+	bundle exec jekyll serve --future --unpublished
 

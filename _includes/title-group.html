@@ -22,7 +22,7 @@
     </h1>
     {% if page.id %}
     <aside>
-        {{ page.date | date: "%d.%m.%y" }}
+        {{ page.date | date: "%d.%m.%Y" }}
         {% if page.categories != empty %}
             &middot;
             {% for category in page.categories %}

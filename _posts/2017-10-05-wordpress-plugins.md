@@ -1,11 +1,11 @@
 ---
-layout: inner
 title: 'Wordpress Plugins'
-date: 2017-09-26 01:37
+date: 2017-10-05 01:37
 categories: security
-tags: wordpress hack
+tags: wordpress hack vulnerability realworld
 featured_image: '/images/posts/wplogo_plugins.png'
-lead_text: 'The awesomeness of Wordpress plugins probably will give your website a free backdoor´
+lead_text: 'The awesomeness of Wordpress plugins probably will give your website a free backdoor'
+published: false
 ---
 
 Recently I was asked to give feedback on a new website. It uses Wordpress, but why? Why not? So I researched a bit and was able to give a well-founded answer about the risk of having plug-ins installed.
@@ -22,3 +22,4 @@ During Pan's analysis 18 abandoned plugins were identified, currently available 
 When _you_ plan to start a website using Wordpress, please think twice about the use of plugins. Or better yet, learn some other techniques to create your website and blog... Note that disabling plugins simply does not help. The vulnerable files are still on the server and vulnerabilities can still be exploited!
 
 More information at the [Wordfence blog](https://www.wordfence.com/blog/2017/05/22-abandoned-wordpress-plugins-vulnerabilities).
+
