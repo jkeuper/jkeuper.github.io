@@ -1,5 +1,4 @@
 ---
-layout: inner
 title: 'Finding errors with git'
 date: 2017-09-30 00:23
 categories: development
