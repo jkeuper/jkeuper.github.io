@@ -17,7 +17,7 @@ Git bisect does a [binary search](https://en.wikipedia.org/wiki/Binary_search_al
 through your commit history to help you identify the commit which introduced
 the faulty behavior, as quickly as possible.
 
-Let's start! First tell git the current situation is not OK and what commit
+Let's start! First tell git the current situation is not OK and which commit
 you know for sure the faulty behaviour was not yet present.
 
 ```console
@@ -29,11 +29,11 @@ Bisecting: 36 revisions left to test after this (roughly 5 steps)
 $ 
 ```
 
-Now git jumped back in time and updated your workspace accorddingly. Git
+Git has jumped back in time and updated your workspace accorddingly. Git
 is using a binary search, so it picked a commit in the middle. Right
 between the known good and bad commits.
 
-Now check the current situation and tell git whether it contains the bad
+Now we check the current situation and tell git whether it contains the bad
 behaviour or not. So we build our website and check our browser to check
 for the faulty behaviour. For this example we say the current situation is
 still bad, so git moves further back in time.
@@ -45,7 +45,7 @@ Bisecting: 21 revisions left to test after this (roughly 4 steps)
 $ 
 ```
 
-Now repeat this with good and bad untill git found the commit that caused
+Repeat this with good and bad untill git found the commit that caused
 the faulty behaviour.
 
 ```console
@@ -76,7 +76,7 @@ Date:   Wed Sep 13 02:14:08 2017 +0200
 $ 
 ```
 
-And there it is, the commit that caused all this misery. Now that
+And there we have it, the commit that caused all this misery. Now that
 was easy! No effort at all compared to other version control
 systems and trying to track that faulty commit.
 
