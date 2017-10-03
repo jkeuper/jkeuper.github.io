@@ -1,6 +1,6 @@
 _id: 7c074b90-a837-11e7-8704-5b582ac668d2
 _parent: /posts/security/2017/09/13/lock-picking-in-practice/
-message: "I could write a very long post about that!\r\n\r\nTo cut it short, avoid regular pin tumbler locks. Go for disc tumbler locks, or locks using a cruciform key or internal cut key. (See different types [here] (https://en.m.wikipedia.org/wiki/Key_(lock)#Types).) \r\n\r\nFor a padlock, take a look at the abus plus.\r\n! [abus plus] (/images/posts/abus-plus.jpg)"
+message: "I could write a very long post about that!\r\n\r\nTo cut it short, avoid regular pin tumbler locks. Go for disc tumbler locks, or locks using a cruciform key or internal cut key. (See different types [here](https://en.m.wikipedia.org/wiki/Key_(lock)#Types) .) \r\n\r\nFor a padlock, take a look at the abus plus.\r\n![abus plus](/images/posts/abus-plus.jpg)"
 name: Jasper
 email: ce766d1991a22bf9ff755ca206fca81b
 url: 'http://keuperict.nl'
