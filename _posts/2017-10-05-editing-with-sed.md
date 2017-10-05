@@ -4,7 +4,7 @@ date: 2017-10-05 00:42
 categories: security
 tags: sed learn hack editor
 featured_image: '/images/posts/sed.png'
-lead_text: 'Editing files in a non-interactive shell can be done _easily_ with sed'
+lead_text: 'Editing files in a non-interactive shell easily with sed'
 ---
 
 At times I find myself in [situations](https://www.us-cert.gov/ncas/alerts/TA15-314A) in which I can not rely on my favorite commandline text editor VIM.
