@@ -58,6 +58,12 @@ div.entry-comments {
   margin-top: 40px;
 }
 
+.highlight table {
+  padding-top: 5px;
+  display: block;
+  overflow-x: auto;
+}
+
 td.code {
   width: 100%;
 }
