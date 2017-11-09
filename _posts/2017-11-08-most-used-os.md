@@ -13,21 +13,30 @@ Every modern Intel CPU has [Intel's Management Engine](https://www.eff.org/deepl
 of Intel's ME by [Positive Technologies](http://blog.ptsecurity.com) has dicovered some
 strings that clearly originate from MINIX3 code. This strongly suggests
 that the ME is based on MINIX3, developed by [Andrew Tanenbaum](http://www.cs.vu.nl/~ast/).
-Andrew Tanenbaum wrote an [open letter to Intel](http://www.cs.vu.nl/~ast/intel/)
-which contains a few confirming facts that Intel has been working with
-MINIX for several years and even requested some changes to MINIX, for
-example, reducing the memory footprint.
+In an [open letter to Intel](http://www.cs.vu.nl/~ast/intel/) Andrew
+Tanenbaum expressed his surprise to find out that MINIX was used in Intel's
+ME and that it would make MINIX the most widely used OS in the world. 
+The open letter contains a few confirming facts that Intel has been 
+working with MINIX for several years and even requested some changes to 
+MINIX, for example, reducing the memory footprint.
 
+## MINIX
 MINIX is a OS with a microkernel. A tiny kernel, responsible only for the
 utmost core functions of the OS. Device drivers and file and process servers
 are actually running in separate user-mode processes, making it virtually 
 imposible to crash the OS. Monolithic kernels, like Windows and Linux, are
 likely to crash when an issue with a driver occurs.
 
-Andrew Tanenbaum is a great professor. I was fortunate enough to have attended
-a few of his lectures.  You might know him from the
+The creator of MINIX, Andrew Tanenbaum, is a great professor. As teaching a
+course on operating systems, a conflict with AT&T restricted him to teach any
+of the UNIX internals. This made him decide to write a minimal UNIX clone and 
+MINIX was born! The full source code was even published as an appendix to the book: 
+"[Operating Systems: Design and Implementation](https://archive.org/details/OperatingSystemsDesignImplementation)"
+
+I was fortunate enough to have attended a few of his lectures. You might know him from the
 [~~flamefest~~ debate](http://www.oreilly.com/openbook/opensources/book/appa.html)
 with Linus Torvalds, calling Linux obsolete...
+
 > Be thankful you are not my student. You would not get a high grade for such a design :-)
 >
 > -- Andrew Tanenbaum
