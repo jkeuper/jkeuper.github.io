@@ -5,7 +5,6 @@ categories: security
 tags: wordpress hack vulnerability realworld
 featured_image: '/images/posts/wplogo_plugins.png'
 lead_text: 'The awesomeness of Wordpress plugins probably will give your website a free backdoor'
-published: false
 ---
 
 Recently I was asked to give feedback on a new website. It uses Wordpress,
