@@ -32,7 +32,7 @@ have known vulnerabilities which have not been fixed. Now that is worrisome.
 ## Wrap up
 When _you_ plan to start a website using Wordpress, please think twice about
 the use of plugins. Or better yet, learn some [other](https://jekyllrb.com)
-[techniques](getbootstrap.com) to create your website and blog.
+[techniques](https://getbootstrap.com) to create your website and blog.
 Note that disabling plugins simply does not help. The vulnerable files are
 still on the server and vulnerabilities can still be exploited!
 
