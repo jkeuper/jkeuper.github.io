@@ -34,7 +34,7 @@ Every post is generated with a css class for each tag. To make sure
 it does not conflict with our regular css classes, we have prepended
 them with "tags_".
 
-```html
+```html{% raw %}
 {% for post in site.posts %}
     {% assign classes = 'tags' %}
     {% for tag in post.tags %}
@@ -43,7 +43,7 @@ them with "tags_".
     <div class="{{ classes }}" style="display: none">
     {% include post.html %}
     </div>
-{% endfor %}
+{% endfor %}{% endraw %}
 ```
 
 For example, when we have 3 posts, the first with "example1" tag, the 
