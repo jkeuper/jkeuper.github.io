@@ -54,13 +54,14 @@ quiet:    false
 defaults:
   - scope:
       path: ""
-      type: category
+      type: "category"
     values:
       layout: "category"
   - scope:
-      path: _posts
+      path: "_posts"
+      type: "posts"
     values:
-      layout: post
+      layout: "post"
       comments: true
 
 # Markdown Processors
