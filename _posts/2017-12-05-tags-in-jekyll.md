@@ -26,8 +26,8 @@ pages with a custom plugin. To solve this github restriction you could run
 a script for generating tag pages, only when new tags have been added.
 
 ## Posts by tag
-I have chosen for a client side solution. One page with all posts summaries
-is generated and based on the selected tag, the posts with that tag are
+I have chosen for a client side solution. One single page with all posts summaries
+is generated and based on the selected tag, the posts with that specific tag are
 displayed using javascript. That's easy and always up-to-date.
 
 Every post is generated with a css class for each tag. To make sure
