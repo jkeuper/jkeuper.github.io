@@ -18,7 +18,7 @@ local repository. The git reflog command will show you a detailed history of
 what has been happening on the head of your branches. Reviewing the git reflog
 output will give you a good idea where things went wrong for you.
 
-'''console
+```console
 $ git reflog
 ae89cc8 HEAD@{0}: commit: Fixed build, escaping Jekyll code
 2cf30a0 HEAD@{1}: commit: Added post about tags in Jekyll
@@ -29,11 +29,12 @@ b5a0b09 HEAD@{4}: commit: Updated VS image in post, added draft for related post
 13faf6b HEAD@{6}: commit: Updated git patching image
 d8e8c3c HEAD@{7}: reset: moving to origin/master
 a433fa2 HEAD@{8}: reset: moving to HEAD
-'''
+```
+
 When you compare it to your regular _git log_, you can see it looks
 completely different.
 
-'''console
+```console
 ae89cc8a70993a9c660b2917ba4d9f73d28937a5 Fixed build, escaping Jekyll code
 2cf30a038b54a9c818f52c60983be5625e9c4833 Added post about tags in Jekyll
 d0ac36dbe4070b845f80bca4cb6031a8e80c2248 Fixed link
@@ -42,7 +43,7 @@ e6ee308c5d8ab1911e4fb97ece5785129c56986f Added some minix/Tanenbaum background i
 1fc46de2df73239795014f11de1692ba34b941cd Finalized wordpress acticle
 4f7983eddca9c9c4031cc0bc1437f9e2173d1a13 Added post on Intels ME
 c12eb70933fe4e25706b8ae6df7716ac3aefe4ad Fixed horizontal scroll for code blocks.
-'''
+```
 
 ## Getting changes back
 With _git reset --hard &lt;commit hash&gt;_, you can restore the head of 
