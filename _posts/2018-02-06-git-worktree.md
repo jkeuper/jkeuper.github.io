@@ -14,7 +14,7 @@ test so I had enough time to investigate out how I could update another
 branch and push a commit to origin.
 
 ## Git worktree
-Today I came across _git worktree_ which allows you to checkout another
+Today I came across "_git worktree_" which allows you to checkout another
 branch to a separate directory. No longer any need for stashing changes
 or waiting for your test run to complete!
 

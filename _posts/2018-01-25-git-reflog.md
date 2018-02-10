@@ -31,7 +31,7 @@ d8e8c3c HEAD@{7}: reset: moving to origin/master
 a433fa2 HEAD@{8}: reset: moving to HEAD
 ```
 
-When you compare it to your regular _git log_, you can see it looks
+When you compare it to your regular "_git log_", you can see it looks
 completely different.
 
 ```console
@@ -46,26 +46,26 @@ c12eb70933fe4e25706b8ae6df7716ac3aefe4ad Fixed horizontal scroll for code blocks
 ```
 
 ## Getting changes back
-With _git reset --hard &lt;commit hash&gt;_, you can restore the head of 
+With "_git reset \--hard &lt;commit hash&gt;_", you can restore the head of 
 your current branch back to the commit you specify.
 
 Another option I find easy to use is to create a new branch and use
-_git cherry-pick_ to specify the commit you want to restore upon your
+"_git cherry-pick_" to specify the commit you want to restore upon your
 new branch. Keep in mind, this could result in merge conflicts, which
 you need to handle in a typical merge. Or you could even view the commit
-with _git show &lt;commit hash&gt;_ and manually copy the lines you need.
+with "_git show &lt;commit hash&gt;_" and manually copy the lines you need.
 
-A nice view of your reflog in the regular log can be seen with _git log --walk-reflogs_.
+A nice view of your reflog in the regular log can be seen with "_git log \--walk-reflogs_".
 
 ## Wrap up
 When fixing things in a tricky situation, I find it good practice to start
 off with a new branch. The messed up branch remains intact and the mess at
 least won't get any worse.
 
-Some situations I've used _git reflog_ to rescue some commits are, deleted
-branches with local commits, a reset --hard on a wrong branch and even
-commits on a local branch while doing a [_git bisect_]({{ site.baseurl }}{% post_url /_posts/2017-09-30-git-bisect %})
-and I forgot to do a _git bisect reset_ to return to the original HEAD.
+Some situations I've used "_git reflog_" to rescue some commits are, deleted
+branches with local commits, a "_reset \--hard_" on a wrong branch and even
+commits on a local branch while doing a [_git bisect_]({{ site.baseurl }}{% post_url 2017-09-30-git-bisect %})
+and I forgot to do a "_git bisect reset_" to return to the original HEAD.
 
 ---
 
@@ -73,3 +73,4 @@ Disclaimer: Of course you _can_ mess things beyond repair with git! Git is
 a really powerful tool, but with powerful tools comes great responsibility.
 (E.g. You could have been playing with expire options of the reflog, or 
 deleted the reflog completely. Then you really have abandoned your safety net.)
+

@@ -7,7 +7,11 @@ featured_image: '/images/posts/git.jpg'
 lead_text: 'Send commits to your coworkers or some other location without pushing them to a repository yet'
 ---
 
-I am working on a windows laptop, so getting jekyll to work correctly seems to be troublesome. So before pushing changes to my repository, I would like to check them on a jekyll docker image running on my NAS. Using the "git format-patch" command, we export out commits and apply them on our jekyll docker image to build and html-proof our site.
+I am working on a windows laptop, so getting jekyll to work correctly seems
+to be troublesome. So before pushing changes to my repository, I would like
+to check them on a jekyll docker image running on my NAS. Using the
+"_git format-patch_" command, we export out commits and apply them on our
+jekyll docker image to build and html-proof our site.
 
 First of all start with a new branch:
 
@@ -52,7 +56,13 @@ Then check whether the patch gives any problems when applying:
 $ git apply --check small_fixes.patch
 ```
 
-Now apply the patch for real. Use "git apply" to apply the patch as single item and have all applied changes as unstaged changes. Use "git am" to apply every commit in the patch also on the target location. This way history is preserved and this is usually the preferred approach. With "git am" you can use the "--signoff" option to add "Signed-off-by:" line to the commit message, so it is clear who is responsible for adding the commits to the code. For now, we don't need the "--signoff" option.
+Now apply the patch for real. Use "_git apply_" to apply the patch as single
+item and have all applied changes as unstaged changes. Use "_git am_" to apply
+every commit in the patch also on the target location. This way history is
+preserved and this is usually the preferred approach. With "_git am_" you can
+use the "_\--signoff_" option to add "Signed-off-by:" line to the commit
+message, so it is clear who is responsible for adding the commits to the
+code. For now, we don't need the "_\--signoff_" option.
 
 ```console
 $ git am < small_fixes.patch
