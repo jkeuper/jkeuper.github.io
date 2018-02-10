@@ -7,8 +7,8 @@ featured_image: '/images/posts/git-worktree.png'
 lead_text: 'Doing things on other branches without interrupting your current work, i.e. switching branches.'
 ---
 
-Frequently I am working on a experimental commit having many changed files
-and running a debug session or time consuming test. But some other task
+Frequently I am working on a large commit having many changed files or running
+a precarious debug session or time consuming test. But some other urgent task
 comes by forcing me to switch branches. Today I was running a time consuming
 test so I had enough time to investigate out how I could update another
 branch and push a commit to origin.
@@ -50,8 +50,9 @@ nothing to commit, working directory clean
 $ 
 ```
 
-Cleaning up your worktree, you can simply delete the directory
-and prune your worktrees.
+When you have finished working on your taks and you want to clean up your
+worktree, you can simply delete the directory and prune your worktrees and
+everything is back to normal.
 
 ```console
 $ cd -
@@ -65,8 +66,9 @@ $ git worktree list
 $ 
 ```
 
-Cleaning up your worktree does not remove your branch. You later
-can continue work on your branch.
+Cleaning up your worktree does not remove your branch, only the worktree
+is deleted. You later can continue work on your branch and see the local
+commits you made while working with your worktree.
 
 ```console
 $ git branch
@@ -86,14 +88,4 @@ I personally would not use it for any large tasks,
 but for quick and easy tasks next to my main task. In practice pushing
 around commits for review, pushing them to origin when the review has
 been finished and quick fixes to process review comments.
-
-
-
-
-
-
-
-
-
-
 
