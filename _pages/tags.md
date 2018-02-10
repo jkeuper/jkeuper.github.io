@@ -40,15 +40,18 @@ permalink: /tags/
         <div class="row">
             <div class="col-md-12">
                 <h2 id="moretags" style="display: none">All tags</h2>
-                {% if site.tags.first[0] == null %} 
-                    {% for tag in site.tags %}  
-                        <a class="btn btn-primary" href="?{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a>
-                    {% endfor %} 
-                {% else %} 
-                    {% for tag in site.tags %}  
-                        <a class="btn btn-primary" href="?{{ tag[0] }}">{{ tag[0] }}&nbsp;<sup>{{ tag[1].size }}</sup></a> 
-                    {% endfor %} 
-                {% endif %}
+                {% capture tags %}
+                    {% for tag in site.tags %}
+                        {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+                    {% endfor %}
+	        {% endcapture %}
+	        {% assign sortedtags = tags | split:' ' | sort %}
+	        {% for tagitem in sortedtags reversed %}
+		    {% assign tagitems = tagitem | split: '#' %}
+		    {% assign tag = tagitems[1] %}
+		    {% assign size = tagitems[2] %}
+                    <a class="btn btn-primary" href="?{{ tag }}">{{ tag }}&nbsp;<sup>{{ size }}</sup></a>
+                {% endfor %} 
             </div>
         </div>
     </div>
