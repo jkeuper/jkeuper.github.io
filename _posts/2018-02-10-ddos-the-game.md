@@ -20,7 +20,7 @@ Tweakers.net published a very nice
 describing the complete timeline of the attack and investigation from
 their perspective.
 
-The attacker, Jelle S., a 18 year old male from Oosterhout, had been
+The attacker, Jelle S., an 18 year old male from Oosterhout, had been
 caught by the Bunq bank before. In September 2017, Jelle executed several
 DDOS attacks on the Bunq bank. After extensive research, Bunq discovered
 that Jelle was behind the attacks. They did not press charges, because
@@ -37,7 +37,7 @@ arrested the first of Februari.
 Coincidentally, at the end of December, I stumbled upon a
 [forum post](http://translate.google.com/translate?js=n&sl=nl&tl=en&u=https://gathering.tweakers.net/forum/list_messages/1820361)
 on Tweakers.net ([original in dutch](https://gathering.tweakers.net/forum/list_messages/1820361)).
-A 18 year old male was seeking help for his _small_ problem (how he 
+An 18 year old male was seeking help for his _small_ problem (how he 
 described it himself) of being addicted to DDOS attacks on banks,
 government agencies, school networks and hosting providers. I guess
 Jelle just does not see the seriousness if his actions. It seems
