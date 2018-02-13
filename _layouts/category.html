@@ -8,6 +8,11 @@ layout: default
             Filed Under <label class="text-muted">#{{ page.tag }}</label>
         </span>
     </h1>
+    {% if page.description %}
+    <p class="lead">
+    {{ page.description }}
+    </p>
+    {% endif %}
 </div>
 
 <main>
