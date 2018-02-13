@@ -2,6 +2,7 @@
 layout: posts
 title: Articles
 permalink: /posts/
+description: 'Articles on software development, ethical hacking, security and other technical stuff.'
 ---
 
 <main>
