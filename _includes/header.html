@@ -16,39 +16,39 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#FF8400">
 
-    <title>{% if page.title %}{{ page.title }} &infin; {{ site.data.global.title }}{% elsif post.title %}{{ post.title }} &infin; {{ site.data.global.title }}{% else %}{{ site.data.global.title }} &infin; {{ site.data.global.description }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} &sim; {{ site.data.global.title }}{% elsif post.title %}{{ post.title }} &sim; {{ site.data.global.title }}{% else %}{{ site.data.global.title }} &sim; {{ site.data.global.description }}{% endif %}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     
-    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:site_name" content="{{ site.data.global.title }}">
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% elsif post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:image" content="{% if page.featured_image %}{{ page.featured_image | prepend: site.baseurl }}{% elsif page.image %}{{ page.image | prepend: site.baseurl }}{% else %}{{ "/images/default.jpg" | prepend: site.baseurl }}{% endif %}" />
     {% if page.date %}
-    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    <meta content="{{site.baseurl}}/about/" property="article:author">
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{site.baseurl}}/about/" />
     {% endif %}
     {% if page.excerpt %}
-    <meta content="{{ page.excerpt }}" property="og:description">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | strip }}" />
     {% elsif page.description %}
-    <meta content="{{ page.description }}" property="og:description">
+    <meta property="og:description" content="{{ page.description | strip_html | strip_newlines | strip}}" />
     {% endif %}
     {% if page.categories %}
     {% for category in page.categories limit:1 %}
-    <meta content="{{ category }}" property="article:section">
+    <meta property="article:section" content="{{ category }}" />
     {% endfor %}
     {% endif %}
     {% if page.tags %}
     {% for tag in page.tags %}
-    <meta content="{{ tag }}" property="article:tag">
+    <meta property="article:tag" content="{{ tag }}" />
     {% endfor %}
     {% endif %}
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.data.global.title }} &infin; {{ site.data.global.description }}" href="/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.data.global.title }} &infin; {{ site.data.global.description }}" href="/atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.data.global.title }} &sim; {{ site.data.global.description }}" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.data.global.title }} &sim; {{ site.data.global.description }}" href="/atom.xml">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700">

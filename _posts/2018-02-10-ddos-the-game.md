@@ -1,5 +1,5 @@
 ---
-title: 'The game of DDOS attacks - Game over'
+title: 'The game of DDOS attacks: Game over'
 date: 2018-02-10 22:53
 categories: security
 tags: ddos hack attack realworld

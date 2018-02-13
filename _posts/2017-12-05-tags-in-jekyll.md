@@ -1,5 +1,5 @@
 ---
-title: 'Tag in my posts'
+title: 'Tags in my posts'
 date: 2017-12-05 21:37
 categories: other
 tags: website jekyll
