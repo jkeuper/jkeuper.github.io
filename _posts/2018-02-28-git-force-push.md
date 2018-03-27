@@ -45,6 +45,8 @@ $ git push --force-with-lease origin master
 To ssh://git@github.com:jkeuper/jkeuper.github.io.git
 ! [rejected]        master -> master (stale info)
 error: failed to push some refs to 'ssh://git@github.com:jkeuper/jkeuper.github.io.git'
+
+$
 ```
 
 ## Wrap up
