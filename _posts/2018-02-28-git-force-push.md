@@ -40,6 +40,13 @@ that the state of the branch is still at the same state as currently known
 at the last fetch. If that is not the case, i.e. something happened to the
 branch since preparing for this push, then this push is not executed and fails.
 
+```console
+$ git push --force-with-lease origin master
+To ssh://git@github.com:jkeuper/jkeuper.github.io.git
+! [rejected]        master -> master (stale info)
+error: failed to push some refs to 'ssh://git@github.com:jkeuper/jkeuper.github.io.git'
+```
+
 ## Wrap up
 It seems that too many people are still using "_git push \--force_", possibly 
 not even knowing that the \--force-with-lease option exists. I think the
