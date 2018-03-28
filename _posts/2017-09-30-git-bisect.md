@@ -7,18 +7,18 @@ featured_image: '/images/posts/git-bisect.png'
 lead_text: 'The good, the bad and the faulty. Git bisect to the rescue!'
 ---
 
-A while ago I was notified something broke in my website. I got a tip "You
-should check it out with _git bisect_" and so I did. That was great to learn
-such a nifty feature of git. I shared my experience with some other git users
-but none of them knew about _git bisect_.
+A while ago someone notified me that my website had broken by a change I made.
+"I got a tip for you! You should check it out with _git bisect_" and so I did.
+It was great to learn such a nifty feature of git. I shared my experience with
+some other git users but none of them knew about _git bisect_.
 
 ## Git bisect
 Git bisect does a [binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-through your commit history to help you identify the commit which introduced
-the faulty behavior, as quickly as possible.
+through your commit history. This way you can identify the commit which introduced
+the faulty behavior as quickly as possible.
 
-Let's start! First tell git the current situation is not OK and which commit
-you know for sure the faulty behaviour was not yet present.
+Let's start! First tell git the current situation is not OK. Next you should 
+specify which commit you know for sure the faulty behaviour was not yet present.
 
 ```console
 $ git bisect start
@@ -45,7 +45,7 @@ Bisecting: 21 revisions left to test after this (roughly 4 steps)
 $ 
 ```
 
-Repeat this with good and bad untill git found the commit that caused
+Repeat this with good and bad until git found the commit that caused
 the faulty behaviour.
 
 ```console
@@ -76,12 +76,12 @@ Date:   Wed Sep 13 02:14:08 2017 +0200
 $ 
 ```
 
-And there we have it, the commit that caused all this misery. Now that
+And there we have it, the commit that caused all that misery. Now that
 was easy! No effort at all compared to other version control
 systems and trying to track that faulty commit.
 
 Our HEAD is still pointing to that faulty commit. Use _git reset_
-to restore your workspace to the situation before your started with
+to restore your workspace to the situation before you started with
 _git bisect_.
 
 ```console
@@ -96,7 +96,7 @@ $
 For the really lazy people, you can use a script to tell git whether
 the current situation is good or bad. Returning 0 from the script
 means good, any non-0 return value means bad. You can run this
-script after telling git the first good and bad commit. For short
+script after telling git the first good and bad commit. In short,
 you can use _git bisect start <<bad>> <<good>>_, listing the bad
 commit first and the good commit second.
 
@@ -105,7 +105,7 @@ $ git bisect start HEAD bb2285b
 $ git bisect run test.sh
 ```
 
-This way test.sh runs on each commit that should be checked untill
-git finds the first faulty commit. You can also run your automated
-tests here which tests the broken functionality.
+This way _test.sh_ runs on each commit until git finds the first 
+faulty commit. You can also create a script to run your automated
+tests here, to check for the broken functionality.
 
