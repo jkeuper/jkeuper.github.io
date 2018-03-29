@@ -29,7 +29,7 @@ Bisecting: 36 revisions left to test after this (roughly 5 steps)
 $ 
 ```
 
-Git has jumped back in time and updated your workspace accorddingly. Git
+Git has jumped back in time and updated your workspace accordingly. Git
 is using a binary search, so it picked a commit in the middle. Right
 between the known good and bad commits.
 
@@ -80,7 +80,7 @@ And there we have it, the commit that caused all that misery. Now that
 was easy! No effort at all compared to other version control
 systems and trying to track that faulty commit.
 
-Our HEAD is still pointing to that faulty commit. Use _git reset_
+Our HEAD is still pointing to that faulty commit. Use _git bisect reset_
 to restore your workspace to the situation before you started with
 _git bisect_.
 
