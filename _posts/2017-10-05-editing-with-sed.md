@@ -30,7 +30,7 @@ $ sed -e '5s/AAA/BBB/' readme.txt
 
 _Replace line #5 with XXX_
 ```bash
-$ sed -e 'Ns/.*/XXX/' readme.txt
+$ sed -e '5s/.*/XXX/' readme.txt
 ```
 
 _Replace AAA with BBB once in each line_
