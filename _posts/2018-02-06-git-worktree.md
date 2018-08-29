@@ -50,7 +50,7 @@ nothing to commit, working directory clean
 $ 
 ```
 
-When you have finished working on your taks and you want to clean up your
+When you have finished working on your patch and you want to clean up your
 worktree, you can simply delete the directory and prune your worktrees and
 everything is back to normal.
 
