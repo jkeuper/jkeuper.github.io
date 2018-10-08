@@ -1,8 +1,8 @@
 ---
 title: 'Installing Hardware Backdoors In The Supply Chain'
-date: 2018-02-28 22:23
-categories: development
-tags: git learn
+date: 2018-10-08 12:23
+categories: security
+tags: hack attack vulnerability realworld hardware
 featured_image: '/images/posts/chinese-hack.png'
 lead_text: 'Backdooring hardware by compromising the manufacturer supply chain'
 ---
