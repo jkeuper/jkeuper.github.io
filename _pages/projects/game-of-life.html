@@ -1,0 +1,204 @@
+---
+layout: inner
+title: Game of Life
+permalink: /projects/game-of-life/
+lead_text: 'The Game of Life playground'
+---
+
+<p>
+A simple implementation of the Game of Life. See my related blog post <a href="{{ "/posts/other/2018/11/19/game-of-life/" | prepend:site.baseurl }}">here</a>.
+</p>
+
+<script src="/js/gameoflife.js"></script>
+<script src="/js/gameoflife_shapes.js"></script>
+<canvas id="myCanvas" style="border:1px solid #d3d3d3;"></canvas>
+<br />
+<button id="toggle" style="width: 75px" onclick="onToggleAnimation()">&#9646;&#9646;</button>
+<button id="slower" style="width: 75px" onclick="onSlower()">&#9664;&#9664;</button>
+<button id="faster" style="width: 75px" onclick="onFaster()">&#9654;&#9654;</button>
+<button id="clear" style="width: 75px" onclick="onClear()">clear</button>
+<select id="select">
+  <option value="">Pixel</option>>
+  <option value="GLIDER">Glider</option>>
+  <option value="UNBOUNDED">Unbounded</option>>
+  <option value="BLINKER">Blinker</option>>
+  <option value="TOAD">Toad</option>>
+  <option value="GLIDER_GUN">Glider gun</option>>
+  <option value="DIEHARD">Diehard</option>>
+  <option value="BOAT">Boat</option>>
+  <option value="R_PENTOMINO">R-Pentomino</option>>
+  <option value="BEACON">Beacon</option>>
+  <option value="ACORN">Acorn</option>>
+  <option value="SPACESHIP">Spaceship</option>>
+  <option value="BLOCK_SWITCH_ENGINE">Block switch engine</option>>
+  <option value="PULSAR">Pulsar</option>>
+</select>
+<script>
+  function clear() {
+    ctx.clearRect(0, 0, width, height);
+
+    // render some grid...
+    ctx.beginPath();
+    var i, j;
+    for (i = 0; i <= rows; i++) {
+      ctx.moveTo(spacing/2, spacing/2+i*(size+spacing));
+      ctx.lineTo(width-1-spacing/2, spacing/2+i*(size+spacing));
+    }
+    for (i = 0; i <= columns; i++) {
+      ctx.moveTo(spacing/2+i*(size+spacing), spacing/2);
+      ctx.lineTo(spacing/2+i*(size+spacing), height-1-spacing/2);
+    }
+    ctx.stroke();
+  }
+
+  function clearCell(x, y)
+  {
+    ctx.clearRect(spacing + (spacing+size)*x, spacing + (spacing+size)*y, size, size);
+  }
+
+  function renderCell(x, y)
+  {
+    ctx.fillRect(spacing + (spacing+size)*x, spacing + (spacing+size)*y, size, size);
+  }
+
+  function initArray(x, y, data)
+  {
+    var i, j;
+    for (i = 0; i < data[0].length; i++)
+    {
+      for (j = 0; j < data.length; j++)
+      {
+        if (data[j][i] == 1)
+        {
+          gol.setCell(x + i, y + j);
+        }
+      }
+    }
+  }
+  
+  function renderGrid()
+  {
+    if (!run)
+      return;
+
+    gol.nextStep();
+    clear();
+    gol.render(renderCell);
+
+    timeout = setTimeout(renderGrid, interval)
+  }
+
+  function onToggleAnimation() {
+    if (run) {
+      pauseAnimation();
+    } else {
+      playAnimation();
+    }
+  }
+
+  function pauseAnimation() {
+    var t = document.getElementById('toggle');
+    t.innerHTML = '&#9654';
+    run = false;
+  }
+
+  function playAnimation() {
+    var t = document.getElementById('toggle');
+    t.innerHTML = '&#9646;&#9646;';
+    run = true;
+    renderGrid();
+  }
+  
+  function onClear() {
+    pauseAnimation();
+    clear();
+    gol.clear();
+  }
+
+  function getX(event, canvas){
+    if (event.offsetX){
+       return event.offsetX;
+    }
+    if (event.clientX){
+      return event.clientX - canvas.offsetLeft;
+    }
+    return null;
+  }
+
+  function getY(event, canvas){
+    if (event.offsetY){//chrome and IE
+      return event.offsetY;
+    }
+    if (event.clientY){// FF
+      return event.clientY- canvas.offsetTop;
+    }
+    return null;    
+  }
+
+  function getPosition(event)
+  {
+    pauseAnimation();
+
+    var x = new Number();
+    var y = new Number();
+    var canvas = c;
+
+    x = getX(event, canvas);
+    y = getY(event, canvas);
+
+    var ix = Math.floor((x-spacing)/(size+spacing));
+    var iy = Math.floor((y-spacing)/(size+spacing));
+
+    var s = document.getElementById("select");
+    if (s.selectedIndex == 0) {
+      gol.setCell(ix, iy, !gol.getCell(ix, iy));
+    } else {
+      var res = eval(s.options[s.selectedIndex].value);
+      initArray(ix, iy, res);
+    }
+    clear();
+    gol.render(renderCell);
+  }
+
+  function onSlower() {
+    interval *= 2;
+  }
+
+  function onFaster() {
+    if (interval <= 1) {
+      alert("Maximum speed, try to decrease the grid size.");
+    } else {
+      interval /= 2;
+      clearTimeout(timeout);
+      renderGrid();
+    }
+  }
+
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle="#000000";
+  c.addEventListener("mousedown", getPosition, false);
+  var run = true;
+  var interval = 256;
+  var spacing = 2;
+  var columns = 70;
+  var rows = 32;
+  var size = 10;
+  var width = spacing + columns*(size+spacing) + 2;
+  var height = spacing + rows*(size+spacing) + 2;
+  c.height = height;
+  c.width = width;
+
+  var timeout;
+  var gol = new GameOfLife(columns, rows);
+
+
+  initArray(1, 1, GLIDER_GUN);
+  //initArray(1, 1, GLIDER);
+  //initArray(40, 20, UNBOUNDED);
+  //initArray(40, 20, PULSAR);
+
+  window.addEventListener("load", function(event) {
+    renderGrid();
+  });
+</script>
