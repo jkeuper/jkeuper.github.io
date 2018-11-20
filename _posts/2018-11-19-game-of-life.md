@@ -8,10 +8,11 @@ lead_text: "Conway's Game of Life in Javascript"
 ---
 
 In 1970 the "Game of Life" was created by the British mathematician John Conway. 
-A discrete mathematics model to mimic the behavior of living cells. Too much or
-too little living cells will reduce the population of cells. The right amount 
-of living cells will keep the process of creating and destroying cells in balance,
-whilst generating facinating patterns.
+A discrete mathematics model to mimic the behavior of living cells.
+
+In this cellular automation, too much or too little living cells will reduce
+the population of cells. The right amount of living cells will keep the process
+of creating and destroying cells in balance, whilst generating facinating patterns.
 
 I just had to create a quick and simple implementation of the Game of Life.
 So I created a Javascript version which you can check out [here](/projects/game-of-life/). The implementation is straight forward, but a nice excercise anyway.

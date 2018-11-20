@@ -11,8 +11,8 @@ Equifax is a consumer credit reporting agency and last week it got hacked. Now
 the information of **143 milion US citizens**, about 45% of the population, has
 been compromised by hackers. The hackers got access to names, birth dates,
 addresses but also social sercurity numbers and in some cases drivers license numbers. 
-This is a _really_ big thing! It got me thinking and I just had to write about it.
 
+This is a _really_ big thing! It got me thinking and I just had to write about it.
 With this kind of information it is possible to impersonate people at banks,
 credit card companies, etc and even the government. For example apply for loan,
 credit card or even a mortgage in _your_ name. And what about your privacy?
