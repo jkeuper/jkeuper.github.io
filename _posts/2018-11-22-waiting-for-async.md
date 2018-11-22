@@ -55,7 +55,7 @@ private static async Task<string> SomeAsyncCode()
 ```
 
 And here your application will **CRASH and BURN** violently with an
-unhandled "_System.AggregateException_"...
+unhandled "AggregateException_".
 
 ## The problem
 As I stated before, async and await is not trivial. The syntactic sugar
@@ -70,9 +70,7 @@ multiple exceptions. Those exceptions are wrapped in an AggregateException.
 Nobody did see the "_AggregateException_" coming and normally you
 wouldn't either. When you are using "_await_", the compiler handles 
 the "_AggregateException_" for you and throws the first exception it
-sees.
-
-If you choose to block an async call with "_Result_" or "_Wait()_"
+sees. If you choose to block an async call with "_Result_" or "_Wait()_"
 instead of "_await_", you must deal with the "_AggregateException_"
 yourself.
 
