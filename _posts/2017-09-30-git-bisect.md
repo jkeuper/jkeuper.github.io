@@ -3,7 +3,7 @@ title: 'Finding errors with git'
 date: 2017-09-30 00:23
 categories: development
 tags: git learn
-featured_image: '/images/posts/git-bisect.png'
+featured_image: '/images/posts/git-bisect.jpg'
 lead_text: 'The good, the bad and the faulty. Git bisect to the rescue!'
 ---
 

@@ -3,7 +3,7 @@ title: 'Working in parallel with git worktree'
 date: 2018-02-06 22:03
 categories: development
 tags: git learn
-featured_image: '/images/posts/git-worktree.png'
+featured_image: '/images/posts/git-worktree.jpg'
 lead_text: 'Doing things on other branches without interrupting your current work, i.e. switching branches.'
 ---
 

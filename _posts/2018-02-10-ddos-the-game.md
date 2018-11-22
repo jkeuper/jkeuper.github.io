@@ -3,7 +3,7 @@ title: 'The game of DDOS attacks: Game over'
 date: 2018-02-10 22:53
 categories: security
 tags: ddos hack attack realworld
-featured_image: '/images/posts/ddos-game-over.png'
+featured_image: '/images/posts/ddos-game-over.jpg'
 lead_text: 'Some insights in what drives an attacker behind a DDOS attack.' 
 ---
 

@@ -9,7 +9,7 @@ lead_text: 'Okay, okay, this is some kind of insiders thing. If you dont know wh
 
 Recently in my OSCP course, I was struggeling a few hours to get a reversed shell connection. It was a FreeBSD box, not quite my expertise. Finally I came up with a simple solution using _tail -f_.
 
-<img src="/images/posts/netcat_freebsd.png" 
+<img src="/images/posts/netcat_freebsd.jpg" 
      alt="Netcat on FreeBSD"
      class="media pull-right img-thumbnail">
 I immediately found that netcat was installed, but ofcourse [without the e-option](https://www.google.nl/search?q=netcat+GAPING_SECURITY_HOLE). All references to netcat without -e suggest you use  After trying harder for many many many tries, I finally came up with the following simple solution.

@@ -3,7 +3,7 @@ title: 'Explore Universal Plug and Play'
 date: 2017-10-10 12:37
 categories: security
 tags: upnp hack network learn
-featured_image: '/images/posts/mediaplayer1.png'
+featured_image: '/images/posts/mediaplayer1.jpg'
 lead_text: 'UPnP is a network technology that lets devices on your network set up rules on your router or modem automatically to allow the connections they need. UPnP is a really simple way to make sure you can connect to all kinds of services and is often recommended.'
 ---
 
