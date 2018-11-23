@@ -55,7 +55,7 @@ private static async Task<string> SomeAsyncCode()
 ```
 
 And here your application will **CRASH and BURN** violently with an
-unhandled "AggregateException_".
+unhandled "_AggregateException_".
 
 ## The problem
 As I stated before, async and await is not trivial. The syntactic sugar
