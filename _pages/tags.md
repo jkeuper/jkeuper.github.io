@@ -64,7 +64,7 @@ function ShowByTag() {
     if (tag && tag.length > 1)
     {
         tag = tag.substr(1);
-        if (new RegExp("^[\.A-Za-z0-9]{2,}$").test(tag))
+        if (new RegExp("^[\._A-Za-z0-9]{2,}$").test(tag))
         {
             var posts = document.getElementsByClassName('tags tags_' + tag);
 	    if (posts.length == 0)

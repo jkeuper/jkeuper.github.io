@@ -13,7 +13,8 @@ see that it just isn't understood well.
 
 Let me first say that async and await seems extremely simple when you
 look at it at a glance, but it really is not that easy. There are many 
-things about async and await, that I could write about.
+things about async and await, that I could write about. View the 
+async/await series [here](/tags/?async_await).
 
 ## Calling an async method from non-async method
 When you want to call an "_async_" method from your non-async code, let's 
@@ -103,3 +104,5 @@ code relatively easy. The construction improves the readability of code
 and the code becomes easy to follow, because the compiler hides all complicated
 stuff from you. But don't forget, asynchronous code is not simple and you
 should really understand what async and await actually do.
+
+Check out the complete async/await series [here](/tags/?async_await).
