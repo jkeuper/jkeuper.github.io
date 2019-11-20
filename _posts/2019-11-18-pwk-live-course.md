@@ -1,11 +1,12 @@
 ---
 title: 'PWK Live Course'
-date: 2018-11-16 13:37
+date: 2019-11-18 13:37
 categories: security
 tags: oscp hack learn 
 featured_image: '/images/posts/offensive-security.jpg'
 lead_text: "The road to OSCP; the PWK 5 day live course by OffSec trainers"
 ---
+
 On my road to OSCP I just finished one awesome week of OSCP Training.
 The live Penetration Testing with Kali Linux (PWK) training by Offensive Security
 trainers. 

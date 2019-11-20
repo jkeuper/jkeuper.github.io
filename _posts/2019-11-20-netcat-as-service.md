@@ -1,11 +1,12 @@
 ---
 title: 'Netcat as a service'
-date: 2018-11-28 23:45
+date: 2019-11-20 23:45
 categories: security
 tags: netcat hack learn 
 featured_image: '/images/posts/netcat.jpg'
 lead_text: "Installing netcat as a windows service"
 ---
+
 Many times I've used Netcat to setup (reverse) shell from a compromised 
 machine. Digging into services lately, I thought why not use a service
 to make Netcat a persistent to be able to return to the machine.
