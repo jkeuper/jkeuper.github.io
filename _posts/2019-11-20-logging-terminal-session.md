@@ -2,7 +2,7 @@
 title: 'Logging terminal session'
 date: 2019-11-20 23:17
 categories: security
-tags: oscp hack learn 
+tags: hack learn bash
 featured_image: '/images/posts/netcat_freebsd.jpg'
 lead_text: 'Logging and replaying your complete terminal session with script'
 ---
