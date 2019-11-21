@@ -98,3 +98,14 @@ Backing up pre-existing dot files to ~/.cfg-backup/
 
 ## Wrap up
 Now I should start adding more dotfiles!
+
+You can try it out and find the repository [here](https://github.com/jkeuper/dotfiles).
+I've added the [install script](https://github.com/jkeuper/dotfiles/tree/master/.bin) 
+in the "_.bin_" directory. Use curl or wget to retrieve the install script 
+and execute it with bash in your home folder. Please note, you need to have
+git installed.
+
+```bash
+cd ~
+curl -s https://raw.githubusercontent.com/jkeuper/dotfiles/master/.bin/install.sh | sh
+```
