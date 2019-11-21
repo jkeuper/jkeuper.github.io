@@ -65,8 +65,8 @@ To stop Netcat, use taskkill:
 C:\>taskkill /f /im nc.exe
 SUCCESS: The process "nc.exe" with PID 5576 has been terminated.
 
-C:\>sc start NcService
+C:\>
 ```
 
 ## Wrap up
-So, not very pretty, but it works fine for me...
+Not very pretty, but it works fine for me...
