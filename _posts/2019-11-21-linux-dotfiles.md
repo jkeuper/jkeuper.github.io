@@ -11,6 +11,7 @@ While working with Linux on and off for two decades, I never
 structurally solved the problem of tweaking a new Linux installation
 to my liking, over and over again.
 
+## Storing dotfiles in git
 Lately I stumbled on a blog post where the [dotfiles](https://en.wikipedia.org/wiki/Dot-file) were stored in git.
 Awesome! But it used symlinks or rsync, not exactly my kind of solution.
 While the time has come again to install a fresh Linux copy, so I searched
