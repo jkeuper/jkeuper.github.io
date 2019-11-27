@@ -9,7 +9,7 @@ lead_text: 'Logging and replaying your complete terminal session with script'
 
 As a penetration tester you really must log all steps you take to make a
 complete and detailed report for the client. Ofcourse you can't help that
-once in a while you miss one step. From my [training](/posts/security/2019/11/18/pwk-live-course/)
+once in a while you miss one step. From my [training]({{ site.baseurl }}{% post_url 2019-11-18-pwk-live-course %})
 I got a valuable tip to use the script command for logging complete terminal 
 sessions.
 

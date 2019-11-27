@@ -128,7 +128,7 @@ public async void Button1_Click(...)
 ```
 
 ## Wrap up
-Like in my previous [article](/posts/development/2018/11/22/waiting-for-async/):
+Like in my previous [article]({{ site.baseurl }}{% post_url 2018-11-22-waiting-for-async %}):
 Never force a wait on an async method. You should use async all the way down. 
 Alternatively, either use "_ConfigureAwait(false)_" in your underlying
 methods/libraries or use a separate thread to execute the async method.

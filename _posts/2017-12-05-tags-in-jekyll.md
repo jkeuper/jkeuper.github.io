@@ -12,7 +12,7 @@ tags of the post? Jekyll does not support tags very well. There is no support
 for a tag archive page, neither does it support listing related posts. Let's
 make this work!
 
-Having added [categories](/posts/other/2017/08/21/new-website/) to my
+Having added [categories]({{ site.baseurl }}{% post_url 2017-08-21-new-website %}) to my
 website, I already discovered the limits of what Jekyll is able to do
 for me. For those few categories, which remain fairly static, it is no
 problem to create a few placeholder pages. (Like [1](/posts/development/), [2](/posts/security/) and [3](/posts/other/))

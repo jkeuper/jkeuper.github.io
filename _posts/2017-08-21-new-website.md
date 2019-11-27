@@ -24,7 +24,7 @@ Thanks Marijn, I owe you a beer!
 ---
 
 ### Update 12 sept 2017:
-Added comments to my website, [read more](/posts/other/2017/09/11/static-comments-jekyll/)...
+Added comments to my website, [read more]({{ site.baseurl }}{% post_url 2017-09-11-static-comments-jekyll %})...
 
 ### Update 24 sept 2017:
 Deploying to my own webhosting because Github Pages does not support SSL for custom domain names.
