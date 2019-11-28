@@ -51,11 +51,19 @@ getting a cup of tea...
 root:~# scriptreplay -d 3.0 -m 1 timing.txt log.txt
 ```
 
+<img src="/images/posts/anim_20191125T010132.gif" 
+     alt="Recorded Terminal Session"
+     class="media pull-right img-thumbnail">
+## Create animated gif
+I you happen to write blog posts, you can even show off and create 
+an animated gif by using a script like [this](https://gist.github.com/jkeuper/7c445def41863d2104ecb67b9ef58110). 
+(Please note: this script uses the $WINDOWID environment variable, my 
+terminal (terminator) does not have this variable set. XTerm does have
+it by default.)
+
 ## Wrap up
 Yet another tip! Start "_script_" in your "_.profile_", so you record every session
 and are able to look up anything later on. 
 
 You might want to echo the date and time now and then, so you can find your way
-in the log-file more easy.
-
-
+in the log-file more easily. I have written [another blog post]({{ site.baseurl }}{% post_url 2019-11-27-viewing-terminal-session-logs %}) about that.

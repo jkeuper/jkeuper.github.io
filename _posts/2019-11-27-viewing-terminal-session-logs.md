@@ -28,36 +28,32 @@ root@kali:~$
 Here `root` is the username, and `kali` is the hostname. The `~` is the
 current path, where `~` stands for the home directory of the user.
 
-> ## NOTE1:
-> Please make a copy of your `.bashrc` file now.
+> ## PLEASE NOTE
+> Please make a copy of your `.bashrc` file now.  
 > `$ cp ~/.bashrc ~/.bashrc.bak`
-
-> ## NOTE2:
-> When you test your result, start a new bash shell and leave your
+>
+> When you test your change, start a new bash shell and leave your
 > current shell running to recover any mistakes.
 
-Show your current bash prompt:
+You can view your current bash prompt as follows:
 ```
 echo $PS1
 ```
 
-Bash has many options for your prompt:
+The bash prompt even supports colors, date and time and more. 
+Below some of the many options for your prompt:
 
-|----|------------------|
-| \u | username-aligned |
-| \h | hostname         |
-| \H | FQDN             |
-| \s | shell name       |
-| \v | shell version    |
-
-The bash prompt even supports colors, date and time and more.
-
-|----|------------------------------------------|
-| \t | current time in 24-hour HH:MM:SS format  |
-| \T | current time in 12-hour HH:MM:SS format  |
-| \@ | current time in 12-hour am/pm format     |
-| \A | current time in 24-hour HH:MM format     |
-
+```
+ \u    username-aligned
+ \h    hostname
+ \H    FQDN
+ \s    shell name
+ \v    shell version
+ \t    current time in 24-hour HH:MM:SS format
+ \T    current time in 12-hour HH:MM:SS format
+ \@    current time in 12-hour am/pm format
+ \A    current time in 24-hour HH:MM format
+```
 
 ## Add the time to your prompt
 Adding the current time to the bash prompt, would solve our problem.
@@ -79,7 +75,11 @@ Now, retrieving the command and time from the logfile, becomes
 really easy.
 
 ```
-sed -n -e '/^[0-9]*:[0-9]*/p' logfile
+root@kali:~# sed -n -e '/^[0-9]*:[0-9]*/p' logfile
+21:06=root@kali:~# xload --help
+21:07=root@kali:~# xload -update 1 -bg black -fg yellow -hl blue -geometry 200x60
+21:08=root@kali:~# exit
+root@kali:~# 
 ```
 
 ## Hide the time
