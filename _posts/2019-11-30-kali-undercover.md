@@ -69,6 +69,9 @@ root@kali:~# kali-undercover
 root@kali:~#
 ```
 
+<img src="/images/posts/kali_undercover_win.png" 
+     alt="Kali Undercover Improved"
+     class="media pull-right img-thumbnail">
 ## Wrap up
 That's it! The undercover look now is very close to Windows 10. I 
 even get confused running Kali in undercover mode as virtual machine.
@@ -76,9 +79,6 @@ even get confused running Kali in undercover mode as virtual machine.
 I guess we should checkout the new powershell next. Powershell is 
 currently available in Kali with the new 2019.4 release.
 
-<img src="/images/posts/kali_undercover_win.png" 
-     alt="Kali Undercover"
-     class="media">
 
 
 
