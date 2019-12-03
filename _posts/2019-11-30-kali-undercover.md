@@ -20,7 +20,7 @@ to spend the evening training what we had learnt that day.
 
 I noticed some strange looks while we were running Kali Linux, instead
 of some familliar OS like Windows or MacOS. (Or maybe because of our
-wildy blinking Alfa Wifi adapters, hanging from out laptops...?)
+wildy blinking Alfa Wifi adapters, hanging from our laptops...?)
 
 ## Improving our cover
 While this solution is already great, we can just make it a bit better
@@ -76,7 +76,7 @@ root@kali:~#
 That's it! The undercover look now is very close to Windows 10. I 
 even get confused running Kali in undercover mode as virtual machine.
 
-I guess we should checkout the new powershell next. Powershell is 
+I guess we should checkout the newly added powershell next. Powershell is 
 currently available in Kali with the new 2019.4 release.
 
 
