@@ -59,8 +59,8 @@ one simple and small request. This results in an extreme amount of data
 being sent at the same time to the victims address.
 
 ## Wrap up
-The attacker reminds me of the behavior of some aronists, mingle in the crowd,
-watching the fire do its job.
+The attacker reminds me of the behavior of some arsonists. They mingle 
+in the crowd, watching the fire do its job.
 
 He is simply not aware of the severity of his actions. Seeking recogition
 for his actions, submitting news items, contacting the sysadmin, hanging
