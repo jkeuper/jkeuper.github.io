@@ -66,21 +66,22 @@ the A record for the DNS server.
 Please note that your domain name should be as short as possible, to
 allow the maximum possible amount of data to be encoded in one request.
 
-If you have a domain name for your dynamic IP adress, you can use that.
-For example "thisismyhomeserver.dyndns.org":
+If you use a service like DynDns have a domain name for your dynamic IP
+adress, you can use that. For example "myserver.dyndns.org":
 
 | Name           | &nbsp; &nbsp; &nbsp; | Type  | &nbsp; &nbsp; &nbsp; | Value            |
 | -------------- | - | ----- | - | ---------------- |
-| t.example.com  |   | NS    |   | thisismyhomeserver.dyndns.org |
+| t.example.com  |   | NS    |   | myserver.dyndns.org |
 
 
 ## Server Setup
 Next, install iodine on the server and allow port 53 to be reachable from
 the internet. Your router should redirect UDP traffic on the external port 
-53 to the port which iodine is running on. 
+53 to the server port which iodine is running on. 
 
-Please do not use port 5353, which is used for broadcasted DNS requests. I
-used port 5300 here.
+Please do not use port 5353 to run iodine on. This port is used for 
+broadcasted DNS requests and [will give vague errors in iodine](https://github.com/spritsail/iodine/issues/6).
+I used port 5300 here.
 
 Some routers, like mine, do not allow some ports to be redirected. I found
 a way around it using UPNP. Read more about this [here]({{ site.baseurl }}{% post_url 2017-10-10-exploring-upnp %}).
@@ -195,6 +196,18 @@ Now we got a working internet connection! Although slow, very slow...
 You can use [iperf](https://github.com/esnet/iperf) to see what the
 actual speed is.
 
+```
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  4] local 10.0.0.1 port 5001 connected with 10.0.0.3 port 33032
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-22.6 sec   640 KBytes   231 Kbits/sec
+[  5] local 10.0.0.1 port 5001 connected with 10.0.0.3 port 33034
+[  5]  0.0-25.7 sec   768 KBytes   245 Kbits/sec
+```
+
 As alternative for sshuttle, you can use the `-D` options of SSH to
 have an SOCKS proxy hosted at port 8080, so you can access the internet
 via that proxy:
@@ -202,5 +215,6 @@ via that proxy:
 ssh -D 8080 root@10.0.0.1
 ```
 
-DNS tunneling is also used by botnets, to contact their command and 
-control server. So using this, might alarm some system administrator.
+Please note: DNS tunneling is also used by botnets, to contact their
+command and control server. So using this, might alarm some system 
+administrator.
