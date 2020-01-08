@@ -1,5 +1,5 @@
 ---
-title: 'Captive portal workaround'
+title: 'Captive Portal Workaround'
 date: 2020-01-07 22:07
 categories: security
 tags: hack learn dns
@@ -41,8 +41,7 @@ Our IP traffic is encoded in bogus DNS requests to our own DNS server,
 which decodes the requested domain names and forwards the traffic to
 its intended destination. The DNS response contains the encoded IP 
 traffic from the destination back to us. Et voila, we have a working
-internet connection. Please note, it is kind of slow, but hey, we are
-online!
+internet connection.
 
 This requires the following:
   * your client pc, which desperately requires internet access
@@ -52,7 +51,14 @@ This requires the following:
   * a ssh server
   * and a tool calld sshuttle
 
-Let's do this!
+It might be a good idea to first check whether you can use SSH or VPN 
+over port 53. That could be WAY faster option. When the network does
+not allow direct access to the internet over port 53 and the network
+provides its own DNS server, then the following scenario will still
+work. Their DNS server will still forward our DNS requests to
+nameservers on the internet, i.e ours.
+
+Please note, it is kind of really slow, but hey, we are online! Let's do this!
 
 ## DNS Setup
 First setup your DNS entries. First the nameserver (NS) entry and next
@@ -63,7 +69,7 @@ the A record for the DNS server.
 | t.example.com  |   | NS    |   | ns.example.com   |
 | ns.example.com |   | A     |   | [your server IP] |
 
-Please note that your domain name should be as short as possible, to
+Note that your domain name should be as short as possible, to
 allow the maximum possible amount of data to be encoded in one request.
 
 If you use a service like DynDns have a domain name for your dynamic IP
