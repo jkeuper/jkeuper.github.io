@@ -15,7 +15,7 @@ On many occasions these captive portals are not completely blocking
 internet access. I'll show you a way you can access the internet, 
 circumventing the captive portal.
 
-## How captive portals work
+## How Captive Portals Work
 Captive portals redirect HTTP-traffic to a login page, where you have
 to press an "Accept" button, or enter some kind of code. From there
 the MAC address of your device is allowed to access the internet.
@@ -31,7 +31,7 @@ When your device detects it cannot reach a certain page, i.e.:
 Then your device knows it should show the login page of the captive 
 portal. The location is given by the 302 response of that request.
 
-## The opportunity
+## The Opportunity
 Captive portals often have incomplete firewall rule sets. Some 
 configurations will route DNS requests from unauthenticated clients
 to the internet. This allows unlimited DNS traffic, which we can use
@@ -172,7 +172,7 @@ dns0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1130
 ...
 ```
 
-## Securing our connection
+## Securing Our Connection
 Please be aware that our connection over the DNS tunnel is not secure!
 To solve that, use ssh over the tunnel. 
 
@@ -196,7 +196,7 @@ a existing small website to retrieve:
 curl www.example.com
 ```
 
-## Wrap up
+## Wrap Up
 Now we got a working internet connection! Although slow, very slow...
 
 You can use [iperf](https://github.com/esnet/iperf) to see what the
