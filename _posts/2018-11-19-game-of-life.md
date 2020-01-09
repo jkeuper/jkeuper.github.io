@@ -43,7 +43,7 @@ of Life appeals to hackers, and especially the concept of the glider.
 ## Implementation
 The game logic is all contained in one class named "_GameOfLife_". This 
 class stores the grid of cells as a simple one-dimensional array. Much
-easier to create than a tow-dimensional array. Fortunately not much
+easier to create than a two-dimensional array. Fortunately not much
 harder to use. The grid is so-called "infinite", which means that 
 everything passing the right edge of the grid, continues from the
 left edge and visa versa. This also applies to the top and bottom
