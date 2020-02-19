@@ -28,7 +28,8 @@ easily.
 
 <img src="/images/posts/oscp-acclaim.png" 
      alt="OSCP Badge"
-     class="media pull-right">
+     class="media pull-right"
+     style="width: 30%" />
 
 ## PWK Online Course
 Two and a half years ago, I started the Penetration Testing with
@@ -174,7 +175,7 @@ My take-aways:
 
 ## Wrap Up
 Obtaining your OSCP is a very technical challenge, but Offensive
-Security does also teaches all students a mindset of being persistent,
+Security also teaches all students a mindset of being persistent,
 creative and perceptive. That is what the journey to OSCP is about — 
 [try harder](https://www.offensive-security.com/offsec/say-try-harder/)!
 
