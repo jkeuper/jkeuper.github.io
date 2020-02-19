@@ -43,9 +43,9 @@ dramatically to succeed at the exam, but could not figure out what.
 ## PWK Live Course
 A little over one year after my failed attempt, I stumbled across
 the live PWK course provided by Offensive Security in my home country,
-the Netherlands. Wow, that is it! A live five day hands-on training
-given by two trainers from Offensive Security, including a capture 
-the flag event on one evening, which should prepare me for the exam.
+the Netherlands. Wow, that is it! A live five day hands-on training,
+including a capture the flag event on one evening, given by two trainers 
+from Offensive Security, that should prepare me for the exam pretty good.
 
 The training was awesome! With fifteen students and guidance of two
 trainers from Offensive Security answering every question. One capture
@@ -177,5 +177,5 @@ My take-aways:
 Obtaining your OSCP is a very technical challenge, but Offensive
 Security also teaches all students a mindset of being persistent,
 creative and perceptive. That is what the journey to OSCP is about — 
-[try harder](https://www.offensive-security.com/offsec/say-try-harder/)!
+[Try harder](https://www.offensive-security.com/offsec/say-try-harder/)!
 
