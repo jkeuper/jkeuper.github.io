@@ -164,8 +164,8 @@ My take-aways:
   to talk with about PWK really helps
 * When you're able to, do the live course, it's awesome!
 * Book your exam early to get the start time you want
-* Make enough screenshots during your exam! Maybe you should have 
-  a screen recorder running so you don't miss anything?
+* Make enough screenshots during your exam! Too bad you are not allowed
+  to use a screen recorder running so you don't miss anything... 
 * Write a step by step approach, test it out on a machine. If it does
   not work, find out what misses and update your approach. Repeat!
 * Know yourself! You must always be alert, when your attention drops, 
