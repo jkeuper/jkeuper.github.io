@@ -1,0 +1,13 @@
+_id: e0992fc0-ac9d-11ea-a07a-21e0e6f93a60
+_parent: /posts/development/2018/01/25/git-reflog/
+message: >-
+  I always like to mention to people that you need physical access to the
+  machine to get the reflog command to work. It's not something you can do
+  remotely or through github.
+name: Cameron McKenzie
+email: d3f0a2172929c4a3aa6d7247643d63d5
+url: >-
+  https://www.theserverside.com/video/Git-reflog-vs-log-How-these-commit-history-tools-differ
+replying_to: ''
+hidden: ''
+date: '2020-06-12T11:14:26.966Z'
