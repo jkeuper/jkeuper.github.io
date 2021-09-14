@@ -3,7 +3,7 @@ title: 'DIY Dynamic DNS'
 date: 2021-09-14 21:47
 categories: other
 tags: dns hosting 
-featured_image: '/images/posts/ddns.png'
+featured_image: '/images/posts/ddns.jpg'
 lead_text: "Making my own DDNS Service"
 ---
 
