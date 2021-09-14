@@ -25,8 +25,7 @@ your current IP address... I wrote a little script which does exactly that.
 You can check the spectacular results [here at github](https://github.com/jkeuper/transip_dyndns).
 
 # Requirements
-This script uses the python REST API module for TransIP, which can be found here:
-[https://github.com/reinoud/transip_rest_client]
+This script uses the python REST API module for TransIP, which can be found [here](https://github.com/reinoud/transip_rest_client).
 
 To get this to work, you should have the following:
  - have an account at TransIP
