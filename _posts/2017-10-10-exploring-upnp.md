@@ -203,3 +203,6 @@ $
 
 Much easier than scripting it all yourself, but now you have learned how UPnP work!
 
+PS: Some routers don't allow manual port forwards for ports below 1024 or for reserved
+port numbers, but allow forwards done with UPnP!!!
+
